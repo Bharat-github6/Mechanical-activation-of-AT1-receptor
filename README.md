@@ -1,6 +1,6 @@
 # Mechanical-activation-of-AT1-receptor
 ## Acyl chain length
-``` Acyl_chain_length/acyl_chain_length.py ```  has the script for comparing three  membrane of different ayl length, DMPC, POPC and SOPC <br> 
+``` Acyl_chain_length/acyl_chain_length.py ```  has the script for comparing three  membrane of different acyl length, DMPC, POPC and SOPC <br> 
 
 ```SOPC_SOPC/sope_sopc.py ```  has script for plotting the time evolution of different descriptor of pure SOPC membrane and SOPC:SOPE membrane <br> 
 
