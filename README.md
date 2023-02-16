@@ -2,7 +2,7 @@
 ## Acyl chain length
 ``` Acyl_chain_length/acyl_chain_length.py ```  has the script for comparing three  membrane of different acyl length, DMPC, POPC and SOPC <br> 
 
-```SOPC_SOPC/sope_sopc.py ```  has script for plotting the time evolution of different descriptor of pure SOPC membrane and SOPC:SOPE membrane <br> 
+```SOPC_SOPE/sope_sopc.py ```  has script for plotting the time evolution of different descriptor of pure SOPC membrane and SOPC:SOPE membrane <br> 
 
 
 ```different_system/time_evolution_different_system.py ``` has the script for plotting the time evolution of different systems, AT1 receptor with S1I8, AT1 receptor with AngII, AT1 receptor with Nanobody bound and AT1 receptor with S1I8 and Nanobody bound. <br> 
