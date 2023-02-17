@@ -1,0 +1,4 @@
+76A7-S3 = 54A7 for proteins + 43A1-S3 for lipids
+Lipid force field parameters from 43A1-S3 ﻿(J. Phys. Chem. B 2009, 113, 2748-2763)
+Protein force field parameters from 54a7 (Eur. Biophys. J. 2011, 40,, 843-856)
+Lipids atoms interact with all other atoms through 43A1-S3 parameters

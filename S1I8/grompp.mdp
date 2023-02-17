@@ -1,0 +1,145 @@
+; Parameter file for Gromacs 2016.3 MD run using the 43A1-S3 Force Field
+; see ﻿J. Phys. Chem. B. 2009, 113, 27482763.
+; Created by Juan M. Vanegas 07/29/08
+; Modified by Juan M. Vanegas 09/18 
+;
+; Deafult values will be used in mdout.mdp for 
+; values not set in this file
+; See the Gromacs manual for detailed description
+
+title			= 
+cpp			= /usr/bin/cpp
+;define			= -DPOSRES
+
+; Run control parameters
+
+; integrator: md -> classical leap-frog integrator, steep or cg -> energy minimization, sd or bd -> langevin dynamics
+; tinit: Starting time for md run (ps)
+; dt: Time step (ps) (0.0005 - 0.002 depending on H's)
+; nsteps: Number of steps to run simulation for
+; comm_mode: Center of mass motion removal: linear, angular, or no
+; comm_grps: Groups for comm removal, default is entire system. Use index file to create groups
+; nstcomm: comm removal freq (steps). Each group requires an entry
+; ld_seed: Seed to initialize random thermal noise and brownian dynamics
+
+integrator		= md
+;continuation		= yes
+tinit			= 0.0000
+dt			    = 0.002
+nsteps			= 500000000
+comm_mode		= linear
+comm_grps		= System
+nstcomm			= 100
+;freezegrps		= Protein
+;freezedim		= Y Y Y
+;energygrps		= Protein
+;energygrp_excl		= Protein Protein
+
+; Output control parameters. 
+
+; Frequency (steps) to write to file positions (x), velocities (v), and forces (f)
+; nstlog: freq. to write enrg to log file (5-10 times more often than nstxout)
+; nstenergy: freq to write enrg to file (5-10 times more often than nstxout)
+; nstxtcout: freq to write coords to xtc traj (= nstxout)
+
+nstxout			= 500000
+nstvout			= 500000
+nstfout			=
+nstlog			= 2500
+nstenergy       = 2500
+nstxout-compressed		= 2500
+cutoff-scheme   = verlet
+
+; Neighbor Searching parameters
+
+; nstlist: freq to update neighbor list (keep at 10)
+; ns_type: grid (use with > 15,000 atoms) or simple (use with < 15,000 atoms))
+; pbc: periodic boundary conditions, xyz or no
+
+nstlist			= 10
+ns_type			= grid
+pbc			= xyz
+
+
+; VdW-LJ Parameters
+
+; vdwtype: Cut-off, Shift, Switch, or Encad-Shift
+; rvdw_switch(nm): where to switch or shift LJ potential
+; rvdw(nm): LJ cut-off distance
+; rlist: list cutoff
+; DispCorr: long range dispersion corrections (use with shift or switch) 
+;           no, Ener -> energy-only corr., EnerPres -> Energy+Pressure corr. 
+; twin range cutoff of 1.0/1.6 nm
+
+vdwtype			= Cut-off
+vdwmodifier     = Potential-shift
+rvdw			= 1.6
+rlist			= 1.6
+
+; Bond Constrain Parameters
+
+; constraints: none, hbonds, all-bonds, h-angles, all-angles
+; constraint_algorithm: lincs or shake
+
+constraints		= all-bonds
+constraint_algorithm	= lincs
+;lincs_order		= 4
+;lincs_iter		= 1
+
+; Electrostatics Parameters
+
+; coulombtype: Cut-off, Ewald, PME, Shift, Switch...
+; rcoulomb(nm): Distance for coulomb cut-off
+
+coulombtype		= PME
+rcoulomb		= 1.6
+;ewald_rtol		= 1e-5
+fourierspacing		= 0.12
+pme_order		= 4
+;optimize_fft		= yes
+
+;fourier_nx		= 96
+;fourier_ny		= 96
+;fourier_nz		= 80
+
+; Temp Coupling Parameters
+
+; tcoupl: no, berendsen (faster, less accurate -> equilibration), or nose-hoover (slower, more accurate -> data collection)
+; tc_grps: groups to couple to temp bath, default is entire system. Molecule type can be a group
+; tau_t(ps): time constant for coupling (at least 1 order of magnitude, typically 2 or 3 orders larger than dt, tau_t >> dt)
+; ref_t(K): ref temp for coupling
+
+tcoupl			= nose-hoover
+tc_grps			= SOPC SOL_Ion Protein
+tau_t			= 0.4 0.4 0.4
+ref_t			= 310 310 310
+
+; Pressure Coupling Parameters
+
+; pcoupl: no, berendsen (faster, less accurate -> equilibration), Parrinello-Rahman (slower, more accurate -> data collection)
+; pcoupltype: isotropic, semiisotropic, anisotropic, surface-tension (surface parallel to xy, use with bilayers)
+; tau_p(ps): time constant for coupling (if using tcoupl=berendsen -> tau_p = 10*tau_t)
+; ref_p(bar): ref pressure for coupling
+; compressibility(1/bar)
+
+pcoupl			= Parrinello-Rahman
+;pcoupl                  = no
+pcoupltype		= Semiisotropic
+tau_p			= 2.0
+ref_p			= 1.01325 1.01325
+compressibility		= 4.5e-5 4.5e-5
+
+; Velocity Generation Parameters
+; Used to generate molec velocities according to a Maxwell distribution at gen_temp
+
+; gen_vel: no or 
+; gen_temp(K): temp for Maxwell distribution
+; gen_seed: integer to initialize velocity random number generator
+
+gen_vel			= yes
+gen_temp		= 310
+gen_seed		= -1
+
+;Brownian or stochastic parameters
+ld_seed			= -1
+

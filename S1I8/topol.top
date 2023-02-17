@@ -1,0 +1,56 @@
+;
+;	File 'protein.top' was generated
+;	By user: bpoudel (1007)
+;	On host: gibbs.cluster
+;	At date: Tue May 29 12:29:46 2018
+
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2016.3 (-:
+;	
+;	Executable:   /apps/gromacs/2016.3/bin/gmx
+;	Data prefix:  /apps/gromacs/2016.3
+;	Working dir:  /home/projects/TWIK1/POPC/construction
+;	Command line:
+;	  gmx pdb2gmx -f modelled_pdb.pdb -ignh -p protein.top -o protein_only_pdb2gmx.pdb
+;	Force field data was read from:
+;	/apps/gmxff
+;
+;	Note:
+;	This might be a non-standard force field location. When you use this topology, the
+;	force field must either be present in the current directory, or the location
+;	specified in the GMXLIB path variable or with the 'include' mdp file option.
+;
+
+
+
+; Include chain topologies
+#include "protein.itp"
+
+; Include chain topologies
+#include "agonist.itp"
+
+;Include lipid topology
+#include "gromos76a7-s3s.ff/lipids_76a7-s3.itp"
+
+; Include water topology
+#include "gromos76a7-s3s.ff/spce.itp"
+
+; Include topology for ions
+#include "gromos76a7-s3s.ff/ions.itp"
+
+
+
+[ system ]
+; Name
+Protein
+
+[ molecules ]
+; Compound        #mols
+protein             1
+agonist             1
+SOPC                298
+SOL                 29050
+CL                  14

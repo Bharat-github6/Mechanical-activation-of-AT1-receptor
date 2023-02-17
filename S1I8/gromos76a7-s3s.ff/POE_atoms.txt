@@ -1,0 +1,11 @@
+C*H1
+CH1*
+CH2*
+CH3*
+CO*
+H
+NL*
+O*
+OA*
+OM*
+P*

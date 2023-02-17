@@ -1,0 +1,1199 @@
+; Table 2.5.2.1
+;       GROMOS bond-stretching parameters
+;
+;
+;	Bond type code
+;	Force constant
+;	Ideal bond length
+;	Examples of usage in terms of non-bonded atom types
+;
+;
+;	ICB(H)[N]    CB[N] B0[N]
+;
+#define gb_1        0.1000  1.5700e+07
+; H  -  OA      750     
+;
+#define gb_2        0.1000  1.8700e+07
+; H  -  N (all) 895     
+;
+#define gb_3        0.1090  1.2300e+07
+; HC  -  C      700     
+;
+#define gb_4         0.112  3.7000e+07
+; C - O (CO in heme)  2220
+;
+#define gb_5        0.1230  1.6600e+07
+; C  - O        1200    
+;
+#define gb_6        0.1250  1.3400e+07
+; C  - OM       1000    
+;
+#define gb_7        0.1320  1.2000e+07
+; CR1  -  NR (6-ring)   1000    
+;
+#define gb_8        0.1330  8.8700e+06
+; H  -  S       750     
+;
+#define gb_9        0.1330  1.0600e+07
+; C  -  NT, NL  900     
+;
+#define gb_10       0.1330  1.1800e+07
+; C, CR1  -  N, NR, CR1, C (peptide, 5-ring)       1000    
+;
+#define gb_11       0.1340  1.0500e+07
+; C  -  N, NZ, NE       900     
+;
+#define gb_12       0.1340  1.1700e+07
+; C  -  NR (no H) (6-ring)      1000    
+;
+#define gb_13       0.1360  1.0200e+07
+; C  -  OA      900     
+;
+#define gb_14       0.1380  1.1000e+07
+; C  -  NR (heme)       1000    
+;
+#define gb_15       0.1390  8.6600e+06
+; CH2  -  C, CR1 (6-ring)       800     
+;
+#define gb_16       0.1390  1.0800e+07
+; C, CR1  -  CH2, C, CR1 (6-ring)       1000    
+;
+#define gb_17       0.1400  8.5400e+06
+; C, CR1, CH2  -  NR (6-ring)   800     
+;
+#define gb_18       0.1430  8.1800e+06
+; CHn  -  OA    800     
+;
+#define gb_19       0.1430  9.2100e+06
+; CHn  -  OM    900     
+;
+#define gb_20       0.1435  6.1000e+06
+; CHn  -  OA (sugar)    600     
+;
+#define gb_21       0.1470  8.7100e+06
+; CHn  -  N, NT, NL, NZ, NE     900     
+;
+#define gb_22       0.1480  5.7300e+06
+; CHn  -  NR (5-ring)   600     
+;
+#define gb_23       0.1480  7.6400e+06
+; CHn  -   NR (6-ring)  800     
+;
+#define gb_24       0.1480  8.6000e+06
+; O, OM  -   P     900     
+;
+#define gb_25       0.1500  8.3700e+06
+; O  -  S       900     
+;
+#define gb_26       0.1520  5.4300e+06
+; CHn  -   CHn (sugar)  600     
+;
+#define gb_27       0.1530  7.1500e+06
+; C, CHn  -   C, CHn    800     
+;
+#define gb_28       0.1610  4.8400e+06
+; OA  -   P     600     
+;
+#define gb_29       0.1630  4.7200e+06
+; OA  -   SI    600     
+;
+#define gb_30       0.1780  2.7200e+06
+; FE  -  C (Heme)
+;
+#define gb_31       0.1780  5.9400e+06
+; CH3  -   S    900     
+;
+#define gb_32       0.1830  5.6200e+06
+; CH2  -   S    900     
+;
+#define gb_33       0.1870  3.5900e+06
+; CH1  -   SI   600     
+;
+#define gb_34        0.198  0.6400e+06
+; NR  -   FE    120    
+;
+#define gb_35        0.200  0.6280e+06
+; NR (heme)  -  FE   120
+;
+#define gb_36       0.2040  5.0300e+06
+; S  -   S      1000    
+;
+#define gb_37        0.221  0.5400e+06
+; NR  -  FE     126
+;
+#define gb_38       0.1000  2.3200e+07
+; HWat  -   OWat        1110    
+;
+#define gb_39       0.1100  1.2100e+07
+; HChl  -   CChl        700     
+;
+#define gb_40       0.1758  8.1200e+06
+; CChl  -   CLChl       1200    
+;
+#define gb_41       0.1530  8.0400e+06
+; ODmso  -   SDmso      900     
+;
+#define gb_42     0.193799  4.9500e+06
+; SDmso  -   CDmso      890     
+;
+#define gb_43       0.1760  8.1000e+06
+; CCl4  -   CLCl4       1200    
+;
+#define gb_44       0.1265  1.3100e+07
+; CUrea  -  OUrea       1000
+;
+#define gb_45        0.135  1.0300e+07
+; CUrea  -  NUrea       900
+;
+#define gb_46     0.163299  8.7100e+06
+; HWat  -   HWat        1110    
+;
+#define gb_47     0.233839  2.6800e+06
+; HChl  -   CLChl        700    
+;
+#define gb_48     0.290283  2.9800e+06
+; CLChl -   CLChl       1200    
+;
+#define gb_49     0.279388  2.3900e+06
+; ODmso -   CDmso        890    
+;
+#define gb_50     0.291189  2.1900e+06
+; CDmso -   CDmso        890    
+;
+#define gb_51       0.2077  3.9700e+06
+; HMet  -   CMet         820    
+;
+#define gb_52     0.287407  3.0400e+06
+; CLCl4 -   CLCl4       1200    
+;
+;Bonding parameters used for lipids from 43A1-S3 FF
+;relabeled gb_* to lb_* to differentiate from 54A7 FF parameters
+;
+#define lb_1     0.1000     0.1570E+08
+; H  -  OA      750                                                            
+;
+#define lb_2     0.1000     0.1870E+08
+; H  -  N (all) 895                                                            
+#define lb_2b    0.103      0.1870E+08
+;
+#define lb_3     0.1090     0.1230E+08
+; HC  -  C      700                                                            
+;
+#define lb_4     0.1230     0.1660E+08
+; C  - O        1200                                                           
+;
+#define lb_5     0.1250     0.1340E+08
+; C  - OM       1000                                                           
+;
+#define lb_6     0.1320     0.1200E+08
+; CR1  -  NR (6-ring)   1000                                                   
+;
+#define lb_7     0.1330     0.8870E+07
+; H  -  S       750                                                            
+;
+#define lb_8     0.1330     0.1060E+08
+; C  -  NT, NL  900                                                            
+;
+#define lb_9     0.1330     0.1180E+08
+; C, CR1  -  N, NR, CR1, C (peptide, 5-ring)       1000                        
+;
+#define lb_10     0.1340     0.1050E+08
+; C  -  N, NZ, NE       900                                                    
+;
+#define lb_11     0.1340     0.1170E+08
+; C  -  NR (no H) (6-ring)      1000                                           
+;
+#define lb_12     0.1360     0.1020E+08
+; C  -  OA      900                                                            
+; C -N (in N-methylacetamide) b3lyp/6-31g** calculation
+;
+#define lb_13     0.1380     0.1100E+08
+; C  -  NR (heme)       1000                                                   
+;
+#define lb_14     0.1390     0.8660E+07
+; CH2  -  C, CR1 (6-ring)       800                                            
+;
+#define lb_15     0.1390     0.1080E+08
+; C, CR1  -  CH2, C, CR1 (6-ring)       1000                                   
+;
+#define lb_16     0.1400     0.8540E+07
+; C, CR1, CH2  -  NR (6-ring)   800                                            
+;
+#define lb_17     0.1430     0.8180E+07
+; CHn  -  OA    800                                                            
+;
+#define lb_18     0.1430     0.9210E+07
+; CHn  -  OM    900                                                            
+;
+#define lb_19     0.1435     0.6100E+07
+; CHn  -  OA (sugar)    600                                                    
+;
+#define lb_20     0.1470     0.8710E+07
+; CHn  -  N, NT, NL, NZ, NE     900                                            
+#define lb_20b    0.151      0.8710E+07
+
+#define lb_20a   0.145       0.8710E+07
+; CHn - N in (N-methylacetamide; b3lyp/6-31g**)
+;
+#define lb_21     0.1480     0.5730E+07
+; CHn  -  NR (5-ring)   600                                                    
+;
+#define lb_22     0.1480     0.7640E+07
+; CHn  -   NR (6-ring)  800                                                    
+;
+#define lb_23     0.1480     0.8600E+07
+; O, OM  -   P     900                                                         
+;
+#define lb_24     0.1500     0.8370E+07
+; O  -  S       900                                                            
+;
+#define lb_25     0.1520     0.5430E+07
+; CHn  -   CHn (sugar)  600                                                    
+;
+#define lb_26     0.1530     0.7150E+07
+; C, CHn  -   C, CHn    800                                                    
+#define lb_26a   0.152       0.7150E+07
+#define lb_26b   0.157       0.7150E+07
+;
+; CHn - C in N-methyl acetamide (b3lyp/6-31g**)
+;
+#define lb_27     0.1610     0.4840E+07
+; OA  -   P     600                                                            
+;
+#define lb_28     0.1630     0.4720E+07
+; OA  -   SI    600                                                            
+;
+#define lb_29     0.1780     0.5940E+07
+; CH3  -   S    900                                                            
+;
+#define lb_30     0.1830     0.5620E+07
+; CH2  -   S    900                                                            
+;
+#define lb_31     0.1870     0.3590E+07
+; CH1  -   SI   600                                                            
+;
+#define lb_32     0.1980     0.6400E+06
+; NR  -   FE    120                                                            
+;
+#define lb_33     0.2040     0.5030E+07
+; S  -   S      1000                                                           
+;
+#define lb_34     0.2000     0.6280E+06
+; NR (heme)  -   FE     120                                                    
+;
+#define lb_35     0.1000     0.2320E+08
+; HWat  -   OWat        1110                                                   
+;
+#define lb_36     0.1100     0.1210E+08
+; HChl  -   CChl        700                                                    
+;
+#define lb_37     0.1758     0.8120E+07
+; CChl  -   CLChl       1200                                                   
+;
+#define lb_38     0.1530     0.8040E+07
+; ODmso  -   SDmso      900                                                    
+;
+#define lb_39     0.1950     0.4950E+07
+; SDmso  -   CDmso      900                                                    
+;
+#define lb_40     0.1760     0.8100E+07
+; CCl4  -   CLCl4       1200                                                   
+;
+#define lb_41     0.1633     0.8710E+07
+; HWat  -   HWat        1110                                                   
+;
+#define lb_42     0.2338     0.2680E+07
+; HChl  -   CLChl        700                                                   
+;
+#define lb_43     0.2903     0.2980E+07
+; CLChl -   CLChl       1200                                                   
+;
+#define lb_44     0.2804     0.2390E+07
+; ODmso -   CDmso        900                                                   
+;
+#define lb_45     0.2930     0.2190E+07
+; CDmso -   CDmso        900                                                   
+;
+#define lb_46     0.1988     0.3970E+07
+; HMet  -   CMet         750                                                   
+;
+#define lb_47     0.2874     0.3040E+07
+; CLCl4 -   CLCl4       1200                                                   
+;
+#define lb_48     0.1470     0.8713E+07
+; CH2* - NL             900     for lipid                                      
+;
+#define lb_49     0.1470     0.8713E+07
+; CH3* - NL             900     for lipid                                      
+;
+#define lb_50     0.1530     0.7149E+07
+; CH2* - CH2*           800     for lipid                                      
+;
+#define lb_51     0.1430     0.6138E+07
+; CH2* - OS             600     for lipid                                      
+;
+#define lb_52     0.1430     0.6138E+07
+; CH1* - OS              600     for lipid                                     
+;
+#define lb_53     0.1530     0.7149E+07
+; CH2* -CH1             800     for lipid                                      
+;
+#define lb_54     0.1480     0.8596E+07
+; P - OM                900                                                    
+;
+#define lb_55     0.1610     0.4842E+07
+; P - OS                600                                                    
+;
+#define lb_56     0.1360     0.1075E+08
+; C - OS                950     for lipid                                      
+;
+#define lb_57     0.1340     0.1025E+08
+;
+;  C*H1 - C*H1   -CH=CH-  880 (from Biophy. J. 73, 2269,1997)                    
+#define lb_57a  0.135 0.1025E+08
+;
+#define lb_58     0.150     0.750E+07 
+#define lb_58a    0.151    0.750E+07
+#define lb_58b    0.152    0.7150E+07
+; CH3-C(R)=C(R)CH3
+#define lb_59     0.109     0.123E+08
+; HC-CH2         GROMACS
+#define lb_60    0.154	     0.7150E+07
+; C, CHn  -   C, CHn    800  5-mem rings e.g. c-pentane
+#define lb_61   0.1535    0.7150E+07
+;   C2R6 - C2R6         800  6-mem rings
+#define lb_62     0.0970     0.2320E+08
+; HW - OW 	 1110
+;
+;---
+;       Table 2.5.3.1.
+;       GROMOS bond-angle bending parameters
+; 
+; 
+; Bond-angle type code
+; Force constant
+; Ideal bond angle
+; Example of usage in terms of non-bonded atom types
+; 
+; 
+;  ICT(H)[N]  CT[N]  (T0[N])
+;
+#define ga_1         90.00      380.00
+; NR(heme)  -  FE  -  C          90
+;
+#define ga_2         90.00      420.00
+; NR(heme)  -  FE  -  NR(heme)  100     
+;
+#define ga_3         96.00      405.00
+; H  -  S  -  CH2       95      
+;
+#define ga_4        100.00      475.00
+; CH2  -  S  -  CH3     110     
+;
+#define ga_5        103.00      420.00
+; OA  -  P  -  OA       95      
+;
+#define ga_6        104.00      490.00
+; CH2  -  S  -  S       110     
+;
+#define ga_7        108.00      465.00
+; NR, C, CR1(5-ring)    100     
+;
+#define ga_8        109.50      285.00
+; CHn  - CHn - CHn, NR(6-ring) (sugar)  60      
+;
+#define ga_9        109.50      320.00
+; CHn, OA  - CHn  - OA, NR(ring) (sugar)        68      
+;
+#define ga_10       109.50      380.00
+; H -  NL, NT  -  H, CHn  - OA  - CHn(sugar)    80      
+;
+#define ga_11       109.50      425.00
+; H  -  NL  -  C, CHn          H  -  NT  -  CHn 90      
+;
+#define ga_12       109.50      450.00
+; X  -  OA, SI  -  X    95      
+;
+#define ga_13       109.50      520.00
+; CHn,C  -  CHn  -  C, CHn, OA, OM, N, NE       110     
+;
+#define ga_14       109.60      450.00
+; OM  -  P  -  OA       95      
+;
+#define ga_15       111.00      530.00
+; CHn  -  CHn  -  C, CHn, OA, NR, NT, NL        110     
+;
+#define ga_16       113.00      545.00
+; CHn  -  CH2  -  S     110     
+;
+#define ga_17       115.00       50.00
+; NR(heme)  -  FE  - NR 10      
+;
+#define ga_18       115.00      460.00
+; H  -  N  -  CHn       90      
+;
+#define ga_19       115.00      610.00
+; CHn, C  -  C  -  OA, N, NT, NL        120     
+;
+#define ga_20       116.00      465.00
+; H  -  NE  -  CH2      90      
+;
+#define ga_21       116.00      620.00
+; CH2  -  N  -  CH1     120     
+;
+#define ga_22       117.00      635.00
+; CH3 -  N  -  C, CHn  - C  - OM        120     
+;
+#define ga_23       120.00      390.00
+; H  -  NT, NZ, NE  -  C        70      
+;
+#define ga_24       120.00      445.00
+; H  -  NT, NZ  -  H    80      
+;
+#define ga_25       120.00      505.00
+; H - N - CH3, H, HC - 6-ring, H - NT - CHn     90      
+;
+#define ga_26       120.00      530.00
+; P, SI  -  OA  -  CHn, P       95      
+;
+#define ga_27       120.00      560.00
+; N, C, CR1 (6-ring, no H)      100     
+;
+#define ga_28       120.00      670.00
+; NZ  -  C  -  NZ, NE   120     
+;
+#define ga_29       120.00      780.00
+; OM  - P  -  OM        140     
+;
+#define ga_30       121.00      685.00
+; O  -  C  -  CHn, C          CH3  -  N  -  CHn 120     
+;
+#define ga_31       122.00      700.00
+; CH1, CH2  -  N  -  C  120     
+;
+#define ga_32       123.00      415.00
+; H  - N  - C   70      
+;
+#define ga_33       124.00      730.00
+; O  - C  - OA, N, NT, NL   C - NE - CH2        120     
+;
+#define ga_34       125.00      375.00
+; FE  - NR  - CR1 (5-ring)      60      
+;
+#define ga_35       125.00      750.00
+; -     120     
+;
+#define ga_36       126.00      575.00
+; H, HC  - 5-ring       90      
+;
+#define ga_37       126.00      640.00
+; X(noH)  - 5-ring      100     
+;
+#define ga_38       126.00      770.00
+; OM  - C  - OM 120     
+;
+#define ga_39       132.00      760.00
+; 5, 6 ring connnection 100     
+;
+#define ga_40       155.00     2215.00
+; SI  - OA  - SI        95      
+;
+#define ga_41       180.00    91350.00
+; Fe  -  C  -  O (heme) 57
+;
+#define ga_42       109.50      434.00
+; HWat  - OWat  - HWat  92      
+;
+#define ga_43       107.57      484.00
+; HChl  - CChl  - CLChl 105     
+;
+#define ga_44       111.30      632.00
+; CLChl  - CChl  - CLChl        131     
+;
+#define ga_45        97.40      469.00
+; CDmso  - SDmso  - CDmso       110     
+;
+#define ga_46       106.75      503.00
+; CDmso  - SDmso  -  ODmso      110     
+;
+#define ga_47       108.53      443.00
+; HMet  - OMet  - CMet  95      
+;
+#define ga_48       109.50      618.00
+; CLCl4  - CCl4  - CLCl4        131     
+;
+#define ga_49       107.60      507.00
+; FTFE  -  CTFE  -  FTFE        100
+;
+#define ga_50       109.50      448.00
+; HTFE  -  OTFE  -  CHTFE        85
+;
+#define ga_51        110.3      524.00
+; OTFE  -  CHTFE  -  CTFE        97
+;
+#define ga_52        111.4      532.00
+; CHTFE  -  CTFE  -  FTFE        95
+;
+#define ga_53        117.2      636.00
+; NUrea  -  CUrea  -  NUrea     120
+;
+#define ga_54        121.4      690.00
+; OUrea  -  CUrea  -  NUrea     120
+
+;Bonding parameters used for lipids from 43A1-S3 FF
+;relabeled ga_* to la_* to differentiate from 54A7 FF parameters
+
+#define la_1      90.00     420.00
+; NR(heme)  -  FE  -  NR(heme)  100   harmonic force const.(kcal/mol/rad^2)    
+;
+#define la_2      96.00     405.00
+; H  -  S  -  CH2       95                                                     
+;
+#define la_3     100.00     475.00
+; CH2  -  S  -  CH3     110                                                    
+;
+#define la_4     103.00     420.00
+; OA  -  P  -  OA       95                                                     
+;
+#define la_5     104.00     490.00
+; CH2  -  S  -  S       110                                                    
+;
+#define la_6     108.00     465.00
+; NR, C, CR1(5-ring)    100                                                    
+;
+#define la_7     109.50     285.00
+; CHn  - CHn - CHn, NR(6-ring) (sugar)  60                                     
+;
+#define la_8     109.50     320.00
+; CHn, OA  - CHn  - OA, NR(ring) (sugar)        68                             
+;
+#define la_9     109.50     380.00
+; H -  NL, NT  -  H, CHn  - OA  - CHn(sugar)    80                             
+;
+#define la_10     109.50     425.00
+; H  -  NL  -  C, CHn          H  -  NT  -  CHn 90                             
+;
+#define la_11     109.50     450.00
+; X  -  OA, SI  -  X    95                                                     
+;
+#define la_12     109.50     520.00
+; CHn,C  -  CHn  -  C, CHn, OA, OM, N, NE       110                            
+;
+#define la_13     109.60     450.00
+; OM  -  P  -  OA       95                                                     
+;
+#define la_14     111.00     530.00
+; CHn  -  CHn  -  C, CHn, OA, NR, NT, NL        110                            
+#define la_14s   111.0  795.0
+;
+#define la_15     113.00     545.00
+; CHn  -  CH2  -  S     110                                                    
+;
+#define la_16     115.00      50.00
+; NR(heme)  -  FE  - NR 10                                                     
+;
+#define la_17     115.00     460.00
+; H  -  N  -  CHn       90                                                     
+;
+#define la_18     115.00     610.00
+; CHn, C  -  C  -  OA, N, NT, NL        120                                    
+;
+#define la_19     116.00     465.00
+; H  -  NE  -  CH2      90                                                     
+;
+#define la_20     116.00     620.00
+; CH2  -  N  -  CH1     120                                                    
+;
+#define la_21     117.00     635.00
+; CH3 -  N  -  C, CHn  - C  - OM        120                                    
+;
+#define la_22     120.00     390.00
+; H  -  NT, NZ, NE  -  C        70                                             
+;
+#define la_23     120.00     445.00
+; H  -  NT, NZ  -  H    80                                                     
+;
+#define la_24     120.00     505.00
+; H - N - CH3, H, HC - 6-ring, H - NT - CHn     90                             
+;
+#define la_25     120.00     530.00
+; P, SI  -  OA  -  CHn, P       95                                             
+;
+#define la_26     120.00     560.00
+; N, C, CR1 (6-ring, no H)      100                                            
+;
+#define la_27     120.00     670.00
+; NZ  -  C  -  NZ, NE   120                                                    
+;
+#define la_28     120.00     780.00
+; OM  - P  -  OM        140                                                    
+;
+#define la_29     121.00     685.00
+; O  -  C  -  CHn, C          CH3  -  N  -  CHn 120                            
+#define la_29a    123.0      685.0
+; O - C - CHn in N-methylacetamide (b3lyp/6-31g**)
+;
+#define la_30     122.00     700.00
+; CH1, CH2  -  N  -  C  120                                                    
+;
+#define la_31     123.00     415.00
+; H  - N  - C   70                                                             
+#define la_31a    118.0      480.00
+;
+#define la_32     124.00     730.00
+; O  - C  - OA, N, NT, NL   C - NE - CH2        120                            
+#define la_32a   122.0  730.0
+; O - C -N in N-methylacetamid (b3/6-31g**)
+;
+#define la_33     125.00     375.00
+; FE  - NR  - CR1 (5-ring)      60                                             
+;
+#define la_34     125.00     750.00
+; -     120                                                                    
+#define la_34a    123.0      750.0
+;
+#define la_35     126.00     575.00
+; H, HC  - 5-ring       90                                                     
+;
+#define la_36     126.00     640.00
+; X(noH)  - 5-ring      100                                                    
+;
+#define la_37     126.00     770.00
+; OM  - C  - OM 120                                                            
+;
+#define la_38     132.00     760.00
+; 5, 6 ring connnection 100                                                    
+;
+#define la_39     155.00     2215.0
+; SI  - OA  - SI        95                                                     
+;
+#define la_40     109.50     434.00
+; HWat  - OWat  - HWat  92                                                     
+;
+#define la_41     107.57     484.00
+; HChl  - CChl  - CLChl 105                                                    
+;
+#define la_42     111.30     632.00
+; CLChl  - CChl  - CLChl        131                                            
+;
+#define la_43      97.40     469.00
+; CDmso  - SDmso  - CDmso       110                                            
+;
+#define la_44     106.75     503.00
+; CDmso  - SDmso  -  ODmso      110                                            
+;
+#define la_45     108.53     443.00
+; HMet  - OMet  - CMet  95                                                     
+;
+#define la_46     109.50     618.00
+; CLCl4  - CCl4  - CLCl4        131                                            
+;
+#define la_47     126.00     615.00
+;  CH2-C*H1-C*H1           96 (from Biophy. J. 73, 2269,1997)                    
+#define la_47H    117.0      550.0
+;   HC-CH1-C*H1 
+;
+#define la_48     112.20     315.00
+;  C*H1-CH2-CH2     64 (from Biophy. J. 73, 2269,1997)                          
+;
+#define la_49     112.00     530.00
+; CHn  -  CHn  -  CHn     hydrocarbon 6-ring hydrocarbon                        
+;
+#define la_50     120.00     700.00
+;     HC - C - O                                                               
+;     6, 6 rings conection 
+;
+#define la_51     119.00     750.00
+;     CHn - C - HC  ?                                                          
+;
+#define la_52     112.0      420.00
+;     CHn - CHn -CHn    e.g. c-hexane
+#define la_53     109.5      330.46
+;     HC-CHn-CHn        gromacs
+#define la_54     104.5  540.00
+;  CH2-CH2-CH2              5-ring hydrocarbon
+#define la_55     124.0   615.00
+;  CHn-C*H1=C*H1-CHn,R   trans
+#define la_56     111.5   530.0
+;  C2R6 - C2R6 - C2R6
+#define la_57     104.00     434.00
+; HWat  - OWat  - HWat  92
+#define la_58       124.00      700.00
+; CH1, CH2  -  N  -  C  120
+;
+#define la_59       110.00      545.00
+; CHn  -  CH2  -  S     110
+;
+#define la_60       126.00      750.00
+; -     120
+#define la_61       112.0      610.0
+; geminal CHn - C0 - CHn
+;
+;       Table 2.5.4.1
+;       GROMOS improper (harmonic) dihedral angle parameters
+; 
+; 
+; Improper dihedral-angle type code
+; Force constant
+; Ideal improper dihedral angle
+; Example of usage
+; 
+; 
+; ICQ(H)[N] CQ[N] (Q0[N])
+;
+#define gi_1           0.0   167.42309
+; planar groups 40      
+;
+#define gi_2      35.26439   334.84617
+; tetrahedral centres   80      
+;
+#define gi_3           0.0   669.69235
+; heme iron     160     
+;
+#define gi_4         180.0   167.42309
+; planar groups 40      
+;
+#define gi_5      -35.26439   334.84617
+; tetrahedral centres   80      
+;
+;
+;Bonding parameters used for lipids from 43A1-S3 FF
+;relabeled gi_* to li_* to differentiate from 54A7 FF parameters
+;
+#define li_1           0.0   167.42309
+#define li_1a          0.0   33.5
+; planar groups 40        
+;
+#define li_2      35.26439   334.84617
+#define li_2a     35.26439   33.5
+; tetrahedral centres   80
+;
+#define li_3           0.0   669.69235
+;
+;
+; heme iron     160   
+;
+;       Table 2.5.5.1 (Note: changes with respect to the 43A1 table)
+;       GROMOS (trigonometric) dihedral torsional angle parameters
+; 
+; 
+; Dihedral-angle type code
+; Force constant
+; Phase shift
+; Multiplicity
+; Example of usage in terms of non-bonded atom types
+; 
+; 
+; ICP(H)[N]  CP[N] PD[N] NP[N]
+; 
+#define gd_1    180.000       2.67          1
+; CHn-CHn-CHn-OA (sugar)  0.6
+;
+#define gd_2    180.000       3.41          1
+; OA-CHn-OA-CHn,H (beta sugar) 0.8
+;
+#define gd_3    180.000       4.97          1
+; OA-CHn-CHn-OA (sugar)	1.2
+;
+#define gd_4    180.000       5.86          1
+; N-CHn-CHn-OA (lipid)	1.4
+;
+#define gd_5    180.000       9.35          1
+; OA-CHn-CHn-OA (sugar)	2.2
+;
+#define gd_6    180.000       9.45          1
+; OA-CHn-OA-CHn,H (alpha sugar)  2.3
+;
+#define gd_7      0.000       2.79          1
+; P-O5*-C5*-C4* (dna)	0.7
+;
+#define gd_8      0.000       5.35          1
+; O5*-C5*-C4*-O4* (dna)	1.3
+;
+#define gd_9    180.000       1.53          2
+; C1-C2-CAB-CBB	(heme)	0.4
+;
+#define gd_10   180.000       5.86          2
+; -C-C-	1.4
+;
+#define gd_11   180.000       7.11          2
+; -C-OA,OE- (at ring)	1.7
+;
+#define gd_12   180.000       16.7          2
+; -C-OA,OE- (carboxyl)	4.0
+;
+#define gd_13   180.000       24.0          2
+; CHn-OE-C-CHn (ester lipid)	5.7
+;
+#define gd_14   180.000       33.5          2
+; -C-N,NT,NE,NZ,NR-	8.0
+;
+#define gd_15   180.000       41.8          2
+; -C-CR1- (6-ring)	10.0
+;
+#define gd_16     0.000        0.0          2
+; -CH1(sugar)-NR(base)	0.0
+;
+#define gd_17     0.000      0.418          2
+; O-CH1-CHn-no O	0.1
+;
+#define gd_18     0.000       2.09          2
+; O-CH1-CHn-O	0.5
+;
+#define gd_19     0.000       3.14          2
+; -OA-P-	0.75
+;
+#define gd_20     0.000       5.09          2
+; O-P-O- (dna, lipids)	1.2
+;
+#define gd_21     0.000       16.7          2
+; -S-S-	4.0
+;
+#define gd_22     0.000       1.05          3
+; -OA-P-	0.25
+;
+#define gd_23     0.000       1.26          3
+; -CHn-OA(no sugar)- 0.3
+;
+#define gd_24     0.000       1.30          3
+; HTFE-OTFE-CHTFE-CTFE	0.3
+;
+#define gd_25     0.000       2.53          3
+; O5*-C5*-C4*-O4* (dna)	0.6
+;
+#define gd_26     0.000       2.93          3
+; -CH2-S-	0.7
+;
+#define gd_27     0.000       3.19          3
+; O-P-O- (dna, lipids)	0.8
+;
+#define gd_28     0.000       3.65          3
+; OA-CHn-OA-CHn,H (alpha sugar)	0.9
+;
+#define gd_29     0.000       3.77          3
+; -C,CHn,SI-	0.9
+;
+#define gd_30     0.000       3.90          3
+; CHn-CHn-OA-H (sugar)	0.9
+;
+#define gd_31     0.000       4.18          3
+; HC-C-S-	1.0
+;
+#define gd_32     0.000       4.69          3
+; AO-CHn-OA-CHn,H (beta sugar)
+;
+#define gd_33     0.000       5.44          3
+; HC-C-C-	1.3
+;
+#define gd_34     0.000       5.92          3
+; -CHn,SI-CHn-	1.4
+;
+#define gd_35     0.000       7.69          3
+; OA-CHn-CHn-OA (sugar)	1.8
+;
+#define gd_36     0.000       8.62          3
+; N-CHn-CHn-OA (lipid)	2.1
+;
+#define gd_37     0.000       9.50          3
+; OA-CHn-CHn-OA (sugar)	2.3
+;
+#define gd_38     0.000        0.0          4
+; -NR-FE-	0.0
+;
+#define gd_39   180.000        1.0          6
+; -CHn-N,NE-	0.24
+;
+#define gd_40     0.000        1.0          6
+; -CHn-C,NR(ring), CR1-	0.24
+;
+#define gd_41     0.000       3.77          6
+; -CHn-NT-	0.9
+;
+#define gd_42    180.000        3.5         2
+; Backbone dihedral angle -N-CA-C-N-    0.84
+;
+#define gd_43     0.000        2.8          3
+; Backbone dihedral angle -C-N-CA-C-    0.67
+;
+#define gd_44   180.000        0.7          6
+;  Backbone dihedral angle -C-N-CA-C-   0.17
+;
+#define gd_45     0.000        0.4          6
+;  Backbone dihedral angle -N-CA-C-N-   0.096
+;
+;
+;Bonding parameters used for lipids from 43A1-S3 FF
+;relabeled gd_* to ld_* to differentiate from 54A7 FF parameters
+;
+;****  GROMOS96 43A1 parameters : ld_1 to ld_21
+;
+#define ld_1     180.000      5.86      2
+; -C-C- 1.4                                                                    
+;                                                                              
+#define ld_2     180.000      7.11      2
+; -C-OA- (at ring)      1.7                                                    
+;                                                                              
+#define ld_3     180.000     16.70      2
+#define ld_3a    180.000     14.5       2      
+; -C-OA- (carboxyl)     4.0                                                    
+;                                                                              
+#define ld_4     180.000     33.50      2
+; -C-N, NT, NE, NZ,NR-  8.0     
+;                                                
+#define ld_5     180.000     41.80      2
+; -C-CR1- (6-ring)      10.0
+;                                                   
+#define ld_5b     180.000     101.3    2
+; G. D. Smith et al JPC A, 102:1200-1208, 1998.
+; trans -C=C- 
+;
+#define ld_6       0.000      0.00      2
+; -CH1 (sugar)-NR(base)-        0.0  
+;
+#define ld_7       0.000      0.42      2
+; O-CH1-CHn-no O        0.1      
+;
+#define ld_8       0.000      2.09      2
+; O-CH1-CHn-O   0.5 
+;
+#define ld_9       0.000      3.14      2
+; -OA-P-        0.75 
+;
+#define ld_10       0.000     16.70      2
+; -S-S- 4.0    
+;
+#define ld_11       0.000      1.05      3
+; -OA-P-        0.25
+;
+#define ld_12       0.000      1.26      3
+; -CHn-OA(no sugar)-    0.3
+;
+#define ld_13       0.000      2.93      3
+; -CH2-S-       0.7 
+;
+#define ld_14       0.000      3.77      3
+; -C,CHn,SI-NT,NL,OA(sugar)-    0.9
+;
+#define ld_15       0.000      4.18      3
+; HC-C-S-       1.0
+;
+#define ld_16       0.000      5.44      3
+; HC-C-C-       1.3 
+;
+#define ld_17       0.000      5.86      3
+;
+; -CHn,SI-CHn-  1.4     Gromos96 45A3 values
+#define ld_17c     0.000      5.92      3 
+; 
+#define ld_17d      0.0        7.75      3  
+;Choline CH3*-N-CH2*-CH2*
+;
+#define ld_18       0.000      0.00      4
+; -NR-FE-       0.0
+;
+#define ld_19     180.000      1.00      6
+; -CHn-N,NE-    0.24
+;
+#define ld_20       0.000      1.00      6
+; -CHn-C,NR (ring), CR1-        0.24
+;
+#define ld_21       0.000      3.77      6
+; -CHn-NT-      0.9 
+;
+#define ld_22     180.0        1680.0      1
+#define ld_23     0.0          1680.0      1
+;*****   43A1-S3 parameters
+;*****
+#define ld_24     180.0        1.0         3
+#define ld_25     180.0       15.0         1
+;
+;
+;Bonding parameters used for lipids from 43A1-S3 FF
+;relabeled gd_* to ld_* to differentiate from 54A7 FF parameters
+;
+; ld_kw* (KW type) functions--implicitly include 1-4 interactions.
+; Use of ld_kw* dihedral function for A-B-C-D requires removal of 
+; the 1-4 pair (A-D) interaction.
+;					       E F
+;                                              | |
+; For dihedrals with branched central bonds, A-B-C-D, additional 1-4 pairs 
+; such as D-E, A-F, may be required to be removed depending on whether
+; the fitted function(s) have the (extra) 1-4 interactions implicitly 
+; built in.
+;*****
+;
+#define ld_kw4  6.9677 18.2203 2.6034 -27.7914 0.0 0.0
+; =CH-CH2-CH2-CH3, =CH-CHn-CHn-CHn- in 1-pentene
+;
+#define ld_kw4a1 6.2979 22.4445  3.6316 -32.1312 0.0 0.0
+; =CH-CH2-CH2-CH3, =CH-CHn-CHn-CHn- in cis 2-hexene
+;
+#define ld_kw4a1H 6.5663 22.1019  2.4944 -30.8888 0.0 0.0
+; =CH-CH2-CH2-CH3, =CH-CHn-CHn-CHn- in cis 2-hexene
+; use with explicit H on unsatd carbons
+;
+#define ld_kw5 3.9135  0.9352 -3.6895 -4.1205  2.0273  0.9340
+; -CH2-CH2-C(carbonyl)-OA-  (CCSD(t)) for both Sn1 and Sn2 chains
+; in addition, remove 1-4 pair: CH2-O(carbonyl oxygen)
+;
+#define ld_kw7 3.6097 19.6399 14.0532 -41.7525 -9.8933 15.2582
+; -CH2*-CH2*-CH2*-C (carbonyl C)- fitted to PyCOOCH3 (b3lyp/6-31g**)
+;
+#define ld_kw9 69.0960 -12.4818 -90.3226 21.6813 26.2366 -14.2095
+; -CHn-NH-CO-CHn- in SM ; fitted to CH3CONHCH3 
+; in addition, remove 1-4 pairs: CHn-O, H-O, and H-CHn 
+;
+#define ld_kw10 4.2623 -4.8876 -3.7933  0.8277  2.1864  2.1514
+; -N(H)-CO-CH2-CH2-  in SM fitted b3lyp/6-31g** to CH3-NHCO-CH2-CH3
+; in addition, remove 1-4 pair O-CH2
+;
+# define ld_kw11 3.6698 18.1626 10.6919 -34.0341 -2.0330 9.0650
+; -C(carbonyl C)-CH2-CH2-CH2-CH2- (b3lyp/6-31g**) in CH3NHCO-CH2CH2CH3
+;
+#define ld_kw12 10.7386 -14.4433  3.2583 -4.6663 -4.0010  9.4580
+; -CH2-CO-NH-CH2 amide in SM 
+; in addition, remove 1-4 pair: CH2-H
+;
+#define ld_kw20 6.4647 16.7016  4.8515 -28.0178 0.0 0.0
+; for -CH2*-CHn*-CHn*-CH2* (fitted for hexane CCSD(t))
+; for non-branched long alkane chains
+;
+#define ld_kw30 2.4908 8.2614 1.0094 -11.1008 0.0 0.0
+; fitted for EtOH dihe (ccsd(t)/6-31g(2df,p))//b3lyp/6-31g(2df,p))
+#define ld_kw31 3.0857 9.2571 0.0 -12.3428 0.0 0.0
+; fitted for c-hexanol dih  ??
+;
+#define ld_kw32 54.9582 -9.5297 -38.6803 -6.7482 0.0 0.0 
+; -CH2-C-O-CH2- fitted for CH3COOCH3 (b3lyp/6-31g**) 
+; CCSD(T) results similar to the b3lyp/6-31g** results
+; in,addition, remove 1-4 pair HC2-O(carbonyl oxygen)
+;
+#define ld_kw33 3.0098  8.1125 -0.1847 -10.9377 0.0 0.0 
+;H-OA-CH1-CH3 for i-propanol at ccsd(t)/6-31g(2df,p)//b3lyp/6-31g(2df,p) level
+; remove all 1-4 pairs (CH3 : 0 charge; H : 0 vdw)
+;
+#define ld_kw34 4.3488 -13.2311 0.5335 17.0669 0.0 0.0
+; fitted for CH3-CH2-CH1=CH2 (1-pentene) model dih 
+; for -CH2-CH2-CH=CH- (ccsd(t))
+;
+#define ld_kw34a1 4.9747 -1.7915  7.9916 -2.8817 -8.3020 9.3376
+; fitted (CCSD(t) for cis -(CH2)-CH=CH-CH2-CH2- in cis-2-pentene
+;
+#define ld_kw34a1H  10.7899 -1.0593  6.2239 -0.8315 -9.3759 9.5287
+; fitted (CCSD(t) for cis -(CH2)-CH=CH-CH2-CH2- in cis-2-pentene
+; use with explicit H on the unsatd carbons.
+;
+#define ld_kw34b 4.1250 -12.9979  1.1515 16.6883 0.0 0.0
+; fitted (CCSD(t) for  -(CH2)-CH=CH-CH2-CH2- in trans-2-pentene
+;
+#define ld_kw34c 3.5069 -11.8297 3.8680 11.6568 -2.0340 3.7648
+; refinement of ld_kw34b
+;
+
+#define ld_kw35 5.2931 15.8794  0.0 -21.1726  0.0 0.0
+;
+; fitted for H-N-CH2-CH3+ [ccsd(t)/6-31g(2df,p)//b3lyp/6-31g(2df,p)]
+; rm all 1-4 interactions H-CH3 
+;
+#define ld_kw36 9.9906  29.9330 -0.0037 -39.9199 0.0 0.0
+; fitted for Me-N-CH2-CH3+
+;rm all 1-4 interactions CH3-CH3
+; alternatively, use ld_17d 
+;
+#define ld_kw41 4.5269 19.2865  4.3427 -39.9963  1.4451 12.5124 
+; =C-CH2*-CH2*-Carbonyl C-
+; fitted for Me-4-hexenoate (b3lyp/6-31**)
+; remove 1-4 pair (=C/carbonyl C)
+
+;******* 
+; ld_s* (KW type) functions for dihedral A-B-C-D,
+; require explicit 1-4 (A-D) interactions
+;
+;******* 
+#define ld_swc1 8.18 2.04  0.0 -8.72 0.0 0.0
+; -C(carbonyl)-OA-CHn-CHn-  Sn2 chain
+#define ld_swc1a  1.6208 7.7937 5.3119 -12.0422 -3.6908 3.5848
+; -C(carbonyl)-OA-CHn-CHn-  Sn1 chain  or use ld_kw1a
+;
+#define ld_swc5 8.1206 2.3598 -7.9193 -1.7111  0.9112 0.4638
+; -CH2-CH2-C(carbonyl)-OA-  (CCSD(t))for both Sn1 and Sn2 chains
+; alternateively, use ld_kw5 
+;
+#define ld_swc6n 9.5761 18.1619 -5.7260 -34.7386 10.1726  2.5538
+; (Me3)N-CH2-CH2-O- in choline; fitted to b3lyp/6-31g**
+;
+;ld_swc7
+#define ld_swc7 6.4950 18.1257 -0.4123 -21.3676 0.0 0.0
+; -CH2*-CH2*-CH2*-C (carbonyl C)- fitted to PyCOOCH3 (b3lyp/6-31g**)
+; alternatively, use ld_kw7
+;
+; ld_swc8
+#define ld_swc8  26.8379 -4.8370 -17.6333 -13.0792 19.7723 -11.0607
+; H3N-CH2-CH2-O- in PE  fitted to b3lyp/6-31g**
+; 
+;ld_swc10 equil to ld_kw10
+#define ld_swc10 7.0063 -3.5685 -6.7518  2.2610  0.2933  1.8553
+;
+; ld_swc12 equivalent to ld_kw12
+#define ld_swc12 9.9078 -10.3926 -3.2420 -2.1275  2.5849  3.3720
+;
+#define ld_swc20 6.4598 18.8263 -0.4115 -24.8746 0.0 0.0        
+; for -CH2*-CHn*-CHn*-CH2* (fitted for hexane CCSD(t))
+; Alternatively use ld_kw20 
+; 
+#define ld_swc32b 51.4707 16.4461 -44.3865 -23.4094 -4.9554  9.0920
+; -CH2-C-O-CH2- fitted for CH3COOCH3 (b3lyp/6-31g**)
+; CCSD(T) results similar to the b3lyp/6-31g** results
+; For Sn2 chain
+;
+#define ld_swc32a 47.3721 21.4838 -62.6198 -15.3930 10.2693  3.1451
+; -CH2-C-O-CH2- fitted for CH3COOCH3 (b3lyp/6-31g**)
+; CCSD(T) results similar to the b3lyp/6-31g** results
+; For Sn1 chain
+;
+#define ld_swc34a2 10.0741 -12.8319 -8.1795 16.4747  0.9261 -0.8221
+; fitted (b3lyp/6-31g** for cis,cis-2,5-heptdiene
+;
+#define ld_swc41a 3.4820 21.9534 2.3772 -40.1170 1.1191 13.377
+; =C-CH2*-CH2*-Carbonyl C-
+; fitted for Me-4-hexenoate (b3lyp/6-31**)
+; Sn-1 chain
+;
+#define ld_swc41b 3.7409 20.8947  4.4656 -39.1218 -1.2645 13.4396
+; =C-CH2*-CH2*-Carbonyl C-
+; fitted for Me-4-hexenoate (b3lyp/6-31**)
+; Sn-2 chain
+;
+#define ld_s0911   1.05  3.15  6.28 -4.2  0.0  0.0
+; sum of ld_9 and ld_11
+;
+; get the constraint distances for dummy atom constructions
+#include "ff_dum.itp"
+ 
+[ constrainttypes ]
+; now the constraints for the rigid NH3 groups
+ MNH3    C    2   DC_MNC1
+ MNH3  CH1    2   DC_MNC2
+ MNH3  CH2    2   DC_MNC2
+ MNH3 MNH3    2   DC_MNMN
+; and the angle-constraints for OH and SH groups in proteins:
+  CH2    H    2   DC_CO
+  CH1    H    2   DC_CO
+    C    H    2   DC_CO
+    P    H    2   DC_PO
+                                                                             
+; bond-, angle- and dihedraltypes for specbonds:
+[ bondtypes ]
+S      S       2    gb_36
+NR     FE      2    gb_34
+
+[ angletypes ]
+CH1    CH2    S     2   ga_16
+CH2    S      S     2   ga_6
+CR1    NR    FE     2	ga_34
+NR     FE    NR     2   ga_17
+
+[ dihedraltypes ]
+S      S      1   gd_21
+NR     FE     1   gd_38
+CH2    S      1   gd_26
