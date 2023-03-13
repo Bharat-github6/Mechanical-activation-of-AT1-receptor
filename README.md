@@ -8,7 +8,7 @@ This data/instructions acompany the folowing manuscript: <br>
 
 **pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
 
-**Datas and script for the figure:**
+**Data and script for the figure:**
 
 ``` Acyl_chain_length/acyl_chain_length.py ```  has the script for comparing three  membrane of different acyl length, DMPC, POPC and SOPC. It corresponds to the Fig 1. <br> 
 
