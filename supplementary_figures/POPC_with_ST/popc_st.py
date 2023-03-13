@@ -277,4 +277,4 @@ fig = plt.gcf()
 plt.subplots_adjust(top=0.9, bottom=0.15, left=0.09, right=0.98, hspace=0.35, wspace=0.4)
 plt.Figure.set_size_inches(fig,(12, 6))
 
-plt.savefig('popc_surface_tension.png', dpi=300)
+plt.savefig('Figure_S2.png', dpi=300)

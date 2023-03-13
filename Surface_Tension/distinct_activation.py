@@ -93,11 +93,11 @@ st10_err=[st10_TM1_TM6.std(), st10_TM1_ICL2.std(),st10_TM5_ICL2.std(),st10_TM6_H
 
 
 
-ang_r2= pd.read_csv('../different_system/data/angii/replica_2/Deer_analysis2us', delim_whitespace=True)
+ang_r2= pd.read_csv('../agonist_nanobody/data/angii/replica_2/Deer_analysis2us', delim_whitespace=True)
 ang_r2.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241','n','n']
 ang_r2=ang_r2[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241']]
 
-ang_r1= pd.read_csv('../different_system/data/angii/replica_1/Deer_analysis2us', delim_whitespace=True)
+ang_r1= pd.read_csv('../agonist_nanobody/data/angii/replica_1/Deer_analysis2us', delim_whitespace=True)
 ang_r1.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241','n','n']
 ang_r1=ang_r1[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241']]
 
@@ -116,11 +116,11 @@ ang=[ang_TM1_TM6.mean(),ang_TM1_ICL2.mean(),ang_TM5_ICL2.mean(),ang_TM6_H8.mean(
 ang_err=[ang_TM1_TM6.std(),ang_TM1_ICL2.std(),ang_TM5_ICL2.std(),ang_TM6_H8.std(),ang_TM3_TM6.std()]
 
 #/home/bpoudel/projects/gpcr/6do1-active-state/SOPC/with_agonist_only/ASPH74-125/production_run/descriptor
-s1i8_r1= pd.read_csv('../different_system/data/s1i8/replica_1/Deer_analysis2us', delim_whitespace=True)
+s1i8_r1= pd.read_csv('../agonist_nanobody/data/s1i8/replica_1/Deer_analysis2us', delim_whitespace=True)
 s1i8_r1.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241','n','n']
 s1i8_r1=s1i8_r1[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241']]
 
-s1i8_r2= pd.read_csv('../different_system/data/s1i8/replica_2/Deer_analysis_2us', delim_whitespace=True)
+s1i8_r2= pd.read_csv('../agonist_nanobody/data/s1i8/replica_2/Deer_analysis_2us', delim_whitespace=True)
 s1i8_r2.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241','n','n']
 s1i8_r2=s1i8_r2[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM2-TM7','TM3-TM6','TM3-TM6-ASP241']]
 
@@ -177,5 +177,5 @@ ax.set_ylim(-8,15)
 fig = plt.gcf()
 plt.subplots_adjust(top=0.82, bottom=0.22, left=0.17, right=0.96, hspace=0.4, wspace=0.2)
 plt.Figure.set_size_inches(fig,(3, 2.5))
-plt.savefig('distinct_activation_4yay.png', dpi=900)
+plt.savefig('Figure_6.png', dpi=900)
 #plt.savefig('distinct_activation.svg', dpi=900)

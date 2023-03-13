@@ -468,4 +468,4 @@ plt.text(-150, 16, 'j', ha='center', fontsize=20, fontweight='bold')
 
 
 plt.subplots_adjust(top=0.92, bottom=0.115, left=0.1, right=0.975, hspace=0.35, wspace=0.25)
-plt.savefig('npxxy.png', dpi=300)
+plt.savefig('Figure_S1.png', dpi=300)

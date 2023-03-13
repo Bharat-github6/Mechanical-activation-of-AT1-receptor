@@ -148,6 +148,6 @@ fig = plt.gcf()
 plt.subplot
 plt.subplots_adjust(top=0.88, bottom=0.15, left=0.18, right=0.975, hspace=0.4, wspace=0.50)
 plt.Figure.set_size_inches(fig,(4, 4))
-plt.savefig('fes_supp.png', dpi=300)
+plt.savefig('Figure_S8.png', dpi=300)
 #plt.savefig('time_evolution.svg', dpi=900, bbox_inches='tight')
 plt.close()

@@ -81,6 +81,6 @@ fig = plt.gcf()
 plt.subplots_adjust(top=0.96, bottom=0.2, left=0.17, right=0.96, hspace=0.4, wspace=0.2)
 plt.Figure.set_size_inches(fig,(3, 2.5))
 
-plt.savefig('thickness_sopc.png', dpi=300)
+plt.savefig('Figure_3.png', dpi=300)
 #plt.savefig('time_evolution.svg', dpi=900, bbox_inches='tight')
 plt.close()

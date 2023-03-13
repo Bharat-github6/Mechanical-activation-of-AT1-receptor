@@ -290,6 +290,5 @@ im2 = left_bottom.imshow(bottomview, aspect='equal')
 
 plt.subplots_adjust(top=0.90, bottom=0.115, left=0.02, right=0.975, hspace=0.43, wspace=0.5)
 plt.Figure.set_size_inches(fig,(10, 5))
-plt.savefig('acyl_chain_length.png', dpi=300)
-#plt.savefig('time_evolution.svg', dpi=900, bbox_inches='tight')
+plt.savefig('Figure_1.png', dpi=300)
 plt.close()

@@ -331,6 +331,6 @@ plt.Figure.set_size_inches(fig,(10, 4))
 
 #plt.subplots_adjust(top=0.94, bottom=0.115, left=0.08, right=0.965, hspace=0.43, wspace=0.5)
 #plt.Figure.set_size_inches(fig,(7.5, 4))
-plt.savefig('ST.png', dpi=300)
+plt.savefig('Figure_2.png', dpi=300)
 #plt.savefig('time_evolution.svg', dpi=900, bbox_inches='tight')
 plt.close()
