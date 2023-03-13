@@ -24,7 +24,7 @@ This data/instructions acompany the folowing manuscript: <br>
 
 **Figure 7:** ```FES/fes_4colv2_for_paper.py``` - free energy estimation of AT1 receptor under various conditions.<br> 
 
-##Data and scripts for figures in the Supplementary Material:
+## Data and scripts for figures in the Supplementary Material:
 
 **Figure S1:** ```supplemantary_figures/NPxxY/NPxxY.py``` - distance between Y302(OH) and Y215(OH) for WT systems.<br> 
 
@@ -42,7 +42,7 @@ This data/instructions acompany the folowing manuscript: <br>
 
 **Figure S8:** ```supplementary_figure/energy_convergence/fes_supp.py``` free energy estimation of AT1 receptor with both S1I8 and nanoboy bound, as well as AT1 receptor with nanobody bound.<br> 
 
-##Example of free energy calculation using the Locally Distributed Tesion (LDT) collective variable
+## Example of free energy calculation using the Locally Distributed Tesion (LDT) collective variable
 
 **Compiling and installing the PLUMED-patched version of GROMACS** <br>
 
