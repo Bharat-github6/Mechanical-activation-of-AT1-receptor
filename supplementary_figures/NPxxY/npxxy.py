@@ -37,7 +37,7 @@ sopc_r2=pd.read_csv('data/sopc_r2', delim_whitespace=True)
 sopc_r2.columns=['time','TYR', 'OH', 'n', 'n']
 sopc_r2=sopc_r2[['time','TYR', 'OH']]
 #time_sopc=np.linspace(0,2000,len(sopc_r1))
-sopc=pd.concat([sopc_r1[['OH']], sopc_r2[['OH']]], axis=1).mean(axis=1)*10
+sopc=pd.concat([sopc_r1[['OH']], sopc_r2[['OH']]], axis=1)*10
 sopc_err=pd.concat([sopc_r1[['OH']], sopc_r2[['OH']]], axis=1).std(axis=1)*10
 time_sopc=np.linspace(0,2000,len(sopc))
 
@@ -56,7 +56,7 @@ popc_r2=popc_r2[:197500]
 
 time_popc=np.linspace(0,2000,len(popc_r2))
 
-popc=pd.concat([popc_r1[['OH']], popc_r2[['OH']]], axis=1).mean(axis=1)*10
+popc=pd.concat([popc_r1[['OH']], popc_r2[['OH']]], axis=1)*10
 popc_err=pd.concat([popc_r1[['OH']], popc_r2[['OH']]], axis=1).std(axis=1)*10
 time_popc=np.linspace(0,2000,len(popc))
 
@@ -73,7 +73,7 @@ dmpc_r2=dmpc_r2[['time','TYR', 'OH']]
 dmpc_r2=dmpc_r2[:197500]
 
 #time_dmpc=np.linspace(0,2000,len(dmpc))
-dmpc=pd.concat([dmpc_r1[['OH']], dmpc_r2[['OH']]], axis=1).mean(axis=1)*10
+dmpc=pd.concat([dmpc_r1[['OH']], dmpc_r2[['OH']]], axis=1)*10
 dmpc_err=pd.concat([dmpc_r1[['OH']], dmpc_r2[['OH']]], axis=1).std(axis=1)*10
 time_dmpc=np.linspace(0,2000,len(dmpc))
 
@@ -90,7 +90,7 @@ st5_r1=st5_r1[['time','TYR', 'OH']]
 st5_r1=st5_r1[:197500]
 
 
-st5=pd.concat([st5_r1[['OH']], st5_r2[['OH']]], axis=1).mean(axis=1)*10
+st5=pd.concat([st5_r1[['OH']], st5_r2[['OH']]], axis=1)*10
 st5_err=pd.concat([st5_r1[['OH']], st5_r2[['OH']]], axis=1).std(axis=1)*10
 #time_st10=np.linspace(0,2000,len(st10))
 time_st5=np.linspace(0,2000,len(st5))
@@ -108,7 +108,7 @@ st10_r2.columns=['time','TYR', 'OH', 'n', 'n']
 st10_r2=st10_r2[['time','TYR', 'OH']]
 st10_r2=st10_r2[:197500]
 window=50
-st10=pd.concat([st10_r1[['OH']], st10_r2[['OH']]], axis=1).mean(axis=1)*10
+st10=pd.concat([st10_r1[['OH']], st10_r2[['OH']]], axis=1)*10
 st10_err=pd.concat([st10_r1[['OH']], st10_r2[['OH']]], axis=1).std(axis=1)*10
 time_st10=np.linspace(0,2000,len(st10))
 
@@ -125,7 +125,7 @@ st15_r2.columns=['time','TYR', 'OH', 'n', 'n']
 st15_r2=st15_r2[['time','TYR', 'OH']]
 st15_r2=st15_r2[:200000]
 window=50
-st15=pd.concat([st15_r1[['OH']], st15_r2[['OH']]], axis=1).mean(axis=1)*10
+st15=pd.concat([st15_r1[['OH']], st15_r2[['OH']]], axis=1)*10
 st15_err=pd.concat([st15_r1[['OH']], st15_r2[['OH']]], axis=1).std(axis=1)*10
 time_st15=np.linspace(0,2000,len(st15))
 
@@ -145,7 +145,7 @@ st20_r2=st20_r2[:190000]
 #st20_r2=st20_r2#[:400000]
 #print(len(st20_r2))
 window=50
-st20=pd.concat([st20_r1[['OH']], st20_r2[['OH']]], axis=1).mean(axis=1)*10
+st20=pd.concat([st20_r1[['OH']], st20_r2[['OH']]], axis=1)*10
 st20_err=pd.concat([st20_r1[['OH']], st20_r2[['OH']]], axis=1).std(axis=1)*10
 time_st20=np.linspace(0,2000,len(st20))
 
@@ -163,7 +163,7 @@ ang_r2=ang_r2[:200000]
 
 
 window=50
-ang=pd.concat([ang_r1[['OH']], ang_r2[['OH']]], axis=1).mean(axis=1)*10
+ang=pd.concat([ang_r1[['OH']], ang_r2[['OH']]], axis=1)*10
 ang_err=pd.concat([ang_r1[['OH']], ang_r2[['OH']]], axis=1).std(axis=1)*10
 time_ang=np.linspace(0,2000,len(ang))
 
@@ -181,7 +181,7 @@ an_r2=an_r2[:197500]
 
 
 window=50
-an=pd.concat([an_r1[['OH']], an_r2[['OH']]], axis=1).mean(axis=1)*10
+an=pd.concat([an_r1[['OH']], an_r2[['OH']]], axis=1)*10
 an_err=pd.concat([an_r1[['OH']], an_r2[['OH']]], axis=1).std(axis=1)*10
 time_an=np.linspace(0,2000,len(an))
 
@@ -198,7 +198,7 @@ pepc_r2=pepc_r2[:200000]
 
 
 window=50
-pepc=pd.concat([pepc_r1[['OH']], pepc_r2[['OH']]], axis=1).mean(axis=1)*10
+pepc=pd.concat([pepc_r1[['OH']], pepc_r2[['OH']]], axis=1)*10
 pepc_err=pd.concat([pepc_r1[['OH']], pepc_r2[['OH']]], axis=1).std(axis=1)*10
 time_pepc=np.linspace(0,2000,len(pepc))
 
@@ -216,7 +216,7 @@ n_r2=n_r2[:197500]
 
 
 window=1
-n=pd.concat([n_r1[['OH']], n_r2[['OH']]], axis=1).mean(axis=1)*10
+n=pd.concat([n_r1[['OH']], n_r2[['OH']]], axis=1)*10
 n_err=pd.concat([n_r1[['OH']], n_r2[['OH']]], axis=1).std(axis=1)*10
 time_n=np.linspace(0,2000,len(n))
 
@@ -235,8 +235,8 @@ s1i8_r2=s1i8_r2[:197500]
 
 
 window=50
-s1i8=pd.concat([s1i8_r1[['OH']], s1i8_r2[['OH']]], axis=1).mean(axis=1)*10
-s1i8_err=pd.concat([s1i8_r1[['OH']], s1i8_r2[['OH']]], axis=1).std(axis=1)*10
+s1i8=pd.concat([s1i8_r1[['OH']], s1i8_r2[['OH']]], axis=1)*10
+s1i8_err=pd.concat([s1i8_r1[['OH']], s1i8_r2[['OH']]], axis=1)*10
 time_s1i8=np.linspace(0,2000,len(s1i8))
 
 
@@ -248,7 +248,7 @@ plt.figure(figsize=(15,15))
 
 plt.subplot(3,4,1)
 plt.plot(time_sopc,sopc.rolling(window).mean(), label='SOPC (C18:0,C18:1)' )
-plt.fill_between(time_sopc,sopc.rolling(window).mean()+sopc_err.rolling(window).mean(), sopc.rolling(window).mean()- sopc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_sopc,sopc.rolling(window).mean()+sopc_err.rolling(window).mean(), sopc.rolling(window).mean()- sopc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 plt.ylabel('TYR215(OH) - TYR302(OH) ($\AA$)', fontsize=12)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
 plt.axhline(y=4.43, linestyle='--', lw=1.5, color='tab:orange')
@@ -265,7 +265,7 @@ plt.text(-150, 16, 'a', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,2)
 plt.plot(time_popc,popc.rolling(window).mean(), label='POPC (C16:0,C18:1)' )
-plt.fill_between(time_popc,popc.rolling(window).mean()+popc_err.rolling(window).mean(), popc.rolling(window).mean()- popc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_popc,popc.rolling(window).mean()+popc_err.rolling(window).mean(), popc.rolling(window).mean()- popc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 #plt.ylabel('RMSD', fontsize=12)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
 plt.axhline(y=4.43, linestyle='--', lw=1.5, color='tab:orange')
@@ -283,7 +283,7 @@ plt.text(-150, 16, 'b', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,3)
 plt.plot(time_dmpc,dmpc.rolling(window).mean(), label='DMPC(di-C14:0)' )
-plt.fill_between(time_dmpc,dmpc.rolling(window).mean()+dmpc_err.rolling(window).mean(), dmpc.rolling(window).mean()- dmpc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_dmpc,dmpc.rolling(window).mean()+dmpc_err.rolling(window).mean(), dmpc.rolling(window).mean()- dmpc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 #plt.ylabel('RMSD', fontsize=12)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
 plt.axhline(y=4.43, linestyle='--', lw=1.5, color='tab:orange')
@@ -300,7 +300,7 @@ plt.text(-150, 16, 'c', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,4)
 plt.plot(time_pepc,pepc.rolling(window).mean(), label='AT1R-SOPC:SOPE' )
-plt.fill_between(time_pepc,pepc.rolling(window).mean()+pepc_err.rolling(window).mean(), pepc.rolling(window).mean()- pepc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_pepc,pepc.rolling(window).mean()+pepc_err.rolling(window).mean(), pepc.rolling(window).mean()- pepc_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 plt.xlim(0,2000)
 plt.ylim(0,15)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
@@ -318,7 +318,7 @@ plt.text(-150, 16, 'd', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,5)
 plt.plot(time_st5,st5.rolling(window).mean(), label=r'$\gamma$ = 5 mN/m' )
-plt.fill_between(time_st5,st5.rolling(window).mean()+st5_err.rolling(window).mean(), st5.rolling(window).mean()- st5_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_st5,st5.rolling(window).mean()+st5_err.rolling(window).mean(), st5.rolling(window).mean()- st5_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 plt.ylabel('TYR215(OH) - TYR302(OH) ($\AA$)', fontsize=12)
 #plt.ylabel('RMSD', fontsize=12)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
@@ -338,7 +338,7 @@ plt.text(-150, 16, 'e', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,6)
 plt.plot(time_st10,st10.rolling(window).mean(), label=r'$\gamma$ = 10 mN/m'  )
-plt.fill_between(time_st10,st10.rolling(window).mean()+st10_err.rolling(window).mean(), st10.rolling(window).mean()- st10_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_st10,st10.rolling(window).mean()+st10_err.rolling(window).mean(), st10.rolling(window).mean()- st10_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 #plt.ylabel('TYR215(OH) - TYR302(OH) ($\AA$)', fontsize=15)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
 plt.axhline(y=4.43, linestyle='--', lw=1.5, color='tab:orange')
@@ -357,7 +357,7 @@ plt.text(-150, 16, 'f', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,7)
 plt.plot(time_st15,st15.rolling(window).mean(), label=r'$\gamma$ = 15 mN/m'  )
-plt.fill_between(time_st15,st15.rolling(window).mean()+st15_err.rolling(window).mean(), st15.rolling(window).mean()- st15_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_st15,st15.rolling(window).mean()+st15_err.rolling(window).mean(), st15.rolling(window).mean()- st15_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 #plt.ylabel('RMSD', fontsize=12)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
 plt.axhline(y=4.43, linestyle='--', lw=1.5, color='tab:orange')
@@ -374,7 +374,7 @@ plt.text(-150, 16, 'g', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,8)
 plt.plot(time_st20,st20.rolling(1).mean(), label=r'$\gamma$ = 20 mN/m'  )
-plt.fill_between(time_st20,st20.rolling(1).mean()+st20_err.rolling(1).mean(), st20.rolling(1).mean()- st20_err.rolling(1).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_st20,st20.rolling(1).mean()+st20_err.rolling(1).mean(), st20.rolling(1).mean()- st20_err.rolling(1).mean(), color='tab:blue', alpha=0.1 )
 plt.xlim(0,2000)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
 plt.axhline(y=4.43, linestyle='--', lw=1.5, color='tab:orange')
@@ -391,7 +391,7 @@ plt.text(-150, 16, 'h', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,11)
 plt.plot(time_an,an.rolling(window).mean(), label='AT1R + S1I8 + Nanobody' )
-plt.fill_between(time_an,an.rolling(window).mean()+an_err.rolling(window).mean(), an.rolling(window).mean()- an_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_an,an.rolling(window).mean()+an_err.rolling(window).mean(), an.rolling(window).mean()- an_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 plt.xlim(0,2000)
 plt.ylim(0,15)
 #plt.ylabel('TYR215(OH) - TYR302(OH) ($\AA$)', fontsize=15)
@@ -410,7 +410,7 @@ plt.text(-150, 16, 'k', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,12)
 plt.plot(time_n,n.rolling(window).mean(), label='AT1R + Nanobody' )
-plt.fill_between(time_n,n.rolling(window).mean()+n_err.rolling(window).mean(), n.rolling(window).mean()- n_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_n,n.rolling(window).mean()+n_err.rolling(window).mean(), n.rolling(window).mean()- n_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 #plt.ylabel('TYR215(OH) - TYR302(OH) ($\AA$)', fontsize=15)
 #plt.legend(fontsize=20)
 plt.xlabel('Time (ns)', fontsize=12)
@@ -429,7 +429,7 @@ plt.text(-150, 16, 'l', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,9)
 plt.plot(time_ang,ang.rolling(window).mean(), label='AT1R + AngII' )
-plt.fill_between(time_ang,ang.rolling(window).mean()+ang_err.rolling(window).mean(), ang.rolling(window).mean()- ang_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_ang,ang.rolling(window).mean()+ang_err.rolling(window).mean(), ang.rolling(window).mean()- ang_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 plt.xlim(0,2000)
 plt.ylim(0,15)
 plt.xlabel('Time (ns)', fontsize=12)
@@ -449,7 +449,7 @@ plt.text(-150, 16, 'i', ha='center', fontsize=20, fontweight='bold')
 
 plt.subplot(3,4,10)
 plt.plot(time_s1i8,s1i8.rolling(window).mean(), label='AT1R + S1I8' )
-plt.fill_between(time_s1i8,s1i8.rolling(window).mean()+s1i8_err.rolling(window).mean(), s1i8.rolling(window).mean()- s1i8_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
+#plt.fill_between(time_s1i8,s1i8.rolling(window).mean()+s1i8_err.rolling(window).mean(), s1i8.rolling(window).mean()- s1i8_err.rolling(window).mean(), color='tab:blue', alpha=0.1 )
 plt.xlim(0,2000)
 plt.ylim(0,15)
 plt.axhline(y=11.71, linestyle='--', lw=1.5, color='0.5')
@@ -464,8 +464,6 @@ plt.yticks([0,5,10,15])
 plt.xticks([0,500,1000,1500,2000])
 plt.title('AT1R + S1I8 ', y=1, pad=-16, fontsize=12)
 plt.text(-150, 16, 'j', ha='center', fontsize=20, fontweight='bold')
-
-
 
 plt.subplots_adjust(top=0.92, bottom=0.115, left=0.1, right=0.975, hspace=0.35, wspace=0.25)
 plt.savefig('Figure_S1.png', dpi=300)
