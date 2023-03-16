@@ -92,23 +92,19 @@ popc_ssr1=pd.read_csv('data/popc_ICL2_r1.xvg', delim_whitespace=True, comment='#
 popc_ssr1.columns=['time', 'structure', 'coil','Bend', 'Turn', 'A_Helix','Th_Helix']
 popc_ssr1=popc_ssr1[:400000]
 
-
-
 popc_ssr2=pd.read_csv('data/popc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
 popc_ssr2.columns=['time', 'structure', 'coil','Bend', 'Turn', 'A_Helix','Th_Helix']
 popc_ssr2=popc_ssr2[:400000]
 
-popc_ssr1=popc_ssr1[['A_Helix','Th_Helix' ]].sum(axis=1)/11
-popc_ssr2=popc_ssr2[['A_Helix','Th_Helix' ]].sum(axis=1)/11
+popc_ssr1=popc_ssr1[['A_Helix','Th_Helix']].sum(axis=1)/11
+popc_ssr2=popc_ssr2[['A_Helix','Th_Helix']].sum(axis=1)/11
+
 popc_ss=pd.concat([popc_ssr1, popc_ssr2], axis=1)
 popc_ss_err=pd.concat([popc_ssr1, popc_ssr2], axis=1).std(axis=1)
-#print(len(popc_ss))
 
 sopc_ssr1=pd.read_csv('data/sopc_ICL2_r1.xvg', delim_whitespace=True, comment='#')
 sopc_ssr1.columns=['time', 'structure', 'coil','Bend', 'B_bride','Turn', 'A_Helix','fiv_Helix','Th_Helix']
 sopc_ssr1=sopc_ssr1[:400000]
-
-
 
 sopc_ssr2=pd.read_csv('data/sopc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
 sopc_ssr2.columns=['time', 'structure', 'coil','Bend', 'Turn', 'A_Helix','fiv_helix','Th_Helix']
@@ -182,7 +178,7 @@ ax=plt.subplot(2,3,1)
 ax.plot(time_popc,(popc_r1[['TM1-TM6']][:200000].rolling(window).mean()*10),color='tab:green',label='POPC')
 ax.plot(time_sopc,(sopc_r1[['TM1-TM6']][:200000].rolling(window).mean()*10), color='tab:blue', label='SOPC')
 ax.plot(time_pepc,(pepc_r1[['TM1-TM6']][:200000].rolling(window).mean()*10),color='tab:red', label='SOPE:SOPC') 
-ax.plot(time_st10,(st10_r1[['TM1-TM6']][:200000].rolling(window).mean()*10), color='grey', label='SOPC +  10mN/m')
+ax.plot(time_st10,(st10_r1[['TM1-TM6']][:200000].rolling(window).mean()*10), color='grey', label='SOPC + 10 mN/m')
 ax.axhline(y=32.85, linestyle='dashed', color='tab:orange', lw=1.5)
 ax.axhline(y=19.70, linestyle='dashed', color='0.5',lw=1.5)
 #ax.legend(loc='best', fontsize=5)
@@ -451,13 +447,18 @@ ax6.plot(time,st10_ssr1.rolling(window).mean(), color='grey', label='AT1R/-/- (S
 ax6.axhline(y=0.66, linestyle='dashed', color='tab:orange', lw=1.5)
 ax6.axhline(y=0, linestyle='dashed', color='0.5',lw=1.5)
 #ax.legend(loc='best', fontsize=5)
-ax6.set_ylim(-0.2,0.8)
+ax6.set_ylim(-0.05,0.8)
 ax6.set_xlim(0,2000)
-rect = Rectangle((2040,-0.2), 432, 1, clip_on=False, ec='k', fill=False)
+rect = Rectangle((2040,-0.05), 432, 0.85, clip_on=False, ec='k', fill=False)
 ax6.add_patch(rect)
+
+print(np.quantile(popc_ssr1[0:400000].dropna().to_numpy().flatten(),0.25))
+print(np.quantile(popc_ssr1[0:400000].dropna().to_numpy().flatten(),0.5))
+print(np.quantile(popc_ssr1[0:400000].dropna().to_numpy().flatten(),0.75))
+print(popc_ss[360000:400000].to_numpy().flatten().std())
 box_parts = ax6.boxplot((popc_ss[360000:400000].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start,), widths=(width,),
-                        medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
+                        medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False, whis=(10,90))
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:green', clip_on=False)
 
@@ -483,8 +484,8 @@ for line in plt.gca().get_lines(): line.set_clip_on(False)
 
 leg= ax.legend(ncol=4,frameon=False,borderpad=None, loc='upper center', bbox_to_anchor=(1.8,1.38), markerscale=7, columnspacing=1, handletextpad=0.4, handlelength=2, fontsize=10)
 
-ax6.yaxis.set_major_locator(MaxNLocator(4))
-ax6.yaxis.set_minor_locator(AutoMinorLocator(5))
+ax6.yaxis.set_major_locator(MultipleLocator(0.2))
+ax6.yaxis.set_minor_locator(AutoMinorLocator(2))
 ax6.xaxis.set_minor_locator(AutoMinorLocator(5))
 ax6.set_ylabel(r'ICL2 $\alpha$-helicity, $f_{\alpha}$', fontsize=11)
 ax6.set_xlim(0,2000)
@@ -524,11 +525,9 @@ ax6.text(-0.22, 1.05, 'f', transform=ax6.transAxes, ha='center', fontsize=14, fo
 
 
 fig = plt.gcf()
-plt.subplots_adjust(top=0.9, bottom=0.115, left=0.08, right=0.94, hspace=0.43, wspace=0.55)
-plt.Figure.set_size_inches(fig,(11, 4))
+plt.subplots_adjust(top=0.9, bottom=0.115, left=0.07, right=0.94, hspace=0.43, wspace=0.6)
 
-#plt.subplots_adjust(top=0.94, bottom=0.115, left=0.08, right=0.965, hspace=0.43, wspace=0.5)
-#plt.Figure.set_size_inches(fig,(7.5, 4))
+plt.Figure.set_size_inches(fig,(8.5, 4))
 plt.savefig('Figure_S4.png', dpi=300)
 #plt.savefig('time_evolution.svg', dpi=900, bbox_inches='tight')
 plt.close()
