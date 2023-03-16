@@ -137,13 +137,13 @@ ax.set_xlabel('Time (ns)', fontsize=11)
 rect = Rectangle((2056,17), 370, 18, clip_on=False, ec='k', fill=False)
 ax.add_patch(rect)
 
-box_parts = ax.boxplot((sopc[['TM1-TM6']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax.boxplot((sopc[['TM1-TM6']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue', clip_on=False)
 
-box_parts = ax.boxplot((pepc[['TM1-TM6']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax.boxplot((pepc[['TM1-TM6']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -170,13 +170,13 @@ ax1.xaxis.set_minor_locator(AutoMinorLocator(5))
 #    i.set_linewidth(3)
 rect = Rectangle((2056,16), 370, 14, clip_on=False, ec='k', fill=False)
 ax1.add_patch(rect)
-box_parts = ax1.boxplot((sopc[['TM1-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax1.boxplot((sopc[['TM1-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue',clip_on=False)
 
-box_parts = ax1.boxplot((pepc[['TM1-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax1.boxplot((pepc[['TM1-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -201,13 +201,13 @@ ax2.xaxis.set_minor_locator(AutoMinorLocator(5))
 #ax1.set_yticks([ 20, 25], minor=True)
 rect = Rectangle((2056,20), 370, 12, clip_on=False, ec='k', fill=False)
 ax2.add_patch(rect)
-box_parts = ax2.boxplot((sopc[['TM5-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax2.boxplot((sopc[['TM5-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue',clip_on=False)
 
-box_parts = ax2.boxplot((pepc[['TM5-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax2.boxplot((pepc[['TM5-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -230,13 +230,13 @@ ax3.yaxis.set_minor_locator(AutoMinorLocator(5))
 ax3.xaxis.set_minor_locator(AutoMinorLocator(5))
 rect = Rectangle((2056,10), 370, 16, clip_on=False, ec='k', fill=False)
 ax3.add_patch(rect)
-box_parts = ax3.boxplot((sopc[['TM6-H8']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax3.boxplot((sopc[['TM6-H8']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue',clip_on=False)
 
-box_parts = ax3.boxplot((pepc[['TM6-H8']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax3.boxplot((pepc[['TM6-H8']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -261,13 +261,13 @@ ax6.yaxis.set_minor_locator(AutoMinorLocator(5))
 ax6.xaxis.set_minor_locator(AutoMinorLocator(5))
 rect = Rectangle((2056,6), 370, 17, clip_on=False, ec='k', fill=False)
 ax6.add_patch(rect)
-box_parts = ax6.boxplot((sopc[['TM3-TM6-ASP241']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax6.boxplot((sopc[['TM3-TM6-ASP241']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue',clip_on=False)
 
-box_parts = ax6.boxplot((pepc[['TM3-TM6-ASP241']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax6.boxplot((pepc[['TM3-TM6-ASP241']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -296,13 +296,13 @@ ax7.xaxis.set_minor_locator(AutoMinorLocator(5))
 rect = Rectangle((2056,-0.05), 370, 0.75, clip_on=False, ec='k', fill=False)
 ax7.add_patch(rect)
 
-box_parts = ax7.boxplot((sopc_ss[180000:200000].dropna().to_numpy().flatten(),),
+box_parts = ax7.boxplot((sopc_ss[-100000:].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue',clip_on=False)
 
-box_parts = ax7.boxplot((ss_pepc[180000:200000].dropna().to_numpy().flatten(),),
+box_parts = ax7.boxplot((ss_pepc[-100000:].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:

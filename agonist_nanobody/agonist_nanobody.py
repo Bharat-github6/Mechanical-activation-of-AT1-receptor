@@ -186,25 +186,25 @@ ax.set_xlabel('Time (ns)', fontsize=11)
 rect = Rectangle((2056,17), 550, 19, clip_on=False, ec='k', fill=False)
 ax.add_patch(rect)
 
-box_parts = ax.boxplot((ang[['TM1-TM6']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax.boxplot((ang[['TM1-TM6']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue', clip_on=False)
 
-box_parts = ax.boxplot((s1i8[['TM1-TM6']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax.boxplot((s1i8[['TM1-TM6']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:red', clip_on=False)
 
-box_parts = ax.boxplot((n[['TM1-TM6']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax.boxplot((n[['TM1-TM6']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+2*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:purple', clip_on=False)
 
-box_parts = ax.boxplot((an[['TM1-TM6']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax.boxplot((an[['TM1-TM6']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+3*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -240,25 +240,25 @@ ax1.add_patch(rect)
 #    i.set_linewidth(3)
 
 
-box_parts = ax1.boxplot((ang[['TM1-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax1.boxplot((ang[['TM1-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue', clip_on=False)
 
-box_parts = ax1.boxplot((s1i8[['TM1-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax1.boxplot((s1i8[['TM1-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:red', clip_on=False)
 
-box_parts = ax1.boxplot((n[['TM1-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax1.boxplot((n[['TM1-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+2*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:purple', clip_on=False)
 
-box_parts = ax1.boxplot((an[['TM1-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax1.boxplot((an[['TM1-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+3*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -287,25 +287,25 @@ ax2.xaxis.set_minor_locator(AutoMinorLocator(5))
 #ax1.set_yticks([ 20, 25], minor=True)
 rect = Rectangle((2056,18), 550, 13, clip_on=False, ec='k', fill=False)
 ax2.add_patch(rect)
-box_parts = ax2.boxplot((ang[['TM5-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax2.boxplot((ang[['TM5-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue', clip_on=False)
 
-box_parts = ax2.boxplot((s1i8[['TM5-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax2.boxplot((s1i8[['TM5-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:red', clip_on=False)
 
-box_parts = ax2.boxplot((n[['TM5-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax2.boxplot((n[['TM5-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+2*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:purple', clip_on=False)
 
-box_parts = ax2.boxplot((an[['TM5-ICL2']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax2.boxplot((an[['TM5-ICL2']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+3*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -332,25 +332,25 @@ ax3.yaxis.set_minor_locator(AutoMinorLocator(5))
 ax3.xaxis.set_minor_locator(AutoMinorLocator(5))
 rect = Rectangle((2056,10), 550, 16, clip_on=False, ec='k', fill=False)
 ax3.add_patch(rect)
-box_parts = ax3.boxplot((ang[['TM6-H8']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax3.boxplot((ang[['TM6-H8']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue', clip_on=False)
 
-box_parts = ax3.boxplot((s1i8[['TM6-H8']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax3.boxplot((s1i8[['TM6-H8']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:red', clip_on=False)
 
-box_parts = ax3.boxplot((n[['TM6-H8']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax3.boxplot((n[['TM6-H8']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+2*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:purple', clip_on=False)
 
-box_parts = ax3.boxplot((an[['TM6-H8']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax3.boxplot((an[['TM6-H8']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+3*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -376,25 +376,25 @@ ax4.xaxis.set_minor_locator(AutoMinorLocator(5))
 
 rect = Rectangle((2056,6), 550, 17, clip_on=False, ec='k', fill=False)
 ax4.add_patch(rect)
-box_parts = ax4.boxplot((ang[['TM3-TM6-ASP241']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax4.boxplot((ang[['TM3-TM6-ASP241']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue', clip_on=False)
 
-box_parts = ax4.boxplot((s1i8[['TM3-TM6-ASP241']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax4.boxplot((s1i8[['TM3-TM6-ASP241']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:red', clip_on=False)
 
-box_parts = ax4.boxplot((n[['TM3-TM6-ASP241']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax4.boxplot((n[['TM3-TM6-ASP241']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+2*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:purple', clip_on=False)
 
-box_parts = ax4.boxplot((an[['TM3-TM6-ASP241']][180000:200000].dropna().to_numpy().flatten()*10,),
+box_parts = ax4.boxplot((an[['TM3-TM6-ASP241']][150000:200000].dropna().to_numpy().flatten()*10,),
                         vert=True, positions=(start+3*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
@@ -435,25 +435,25 @@ leg=ax5.legend(ncol=4,frameon=False,borderpad=None, loc='upper center', bbox_to_
 for i in leg.legendHandles:
     i.set_linewidth(2)
 
-box_parts = ax5.boxplot((ang_ss[360000:400000].dropna().to_numpy().flatten(),),
+box_parts = ax5.boxplot((ang_ss[-100000:].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:blue', clip_on=False)
 
-box_parts = ax5.boxplot((s1i8_ss[360000:400000].dropna().to_numpy().flatten(),),
+box_parts = ax5.boxplot((s1i8_ss[-100000:].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start+sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:red', clip_on=False)
 
-box_parts = ax5.boxplot((n_ss[360000:400000].dropna().to_numpy().flatten(),),
+box_parts = ax5.boxplot((n_ss[-100000:].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start+2*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:purple', clip_on=False)
 
-box_parts = ax5.boxplot((an_ss[360000:400000].dropna().to_numpy().flatten(),),
+box_parts = ax5.boxplot((an_ss[-100000:].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start+3*sp,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False)
 for patch in box_parts['boxes']:
