@@ -174,4 +174,4 @@ plt.ylim(-20,15)
 plt.legend(frameon=False)
 
 plt.subplots_adjust(top=0.90, bottom=0.115, left=0.1, right=0.975, hspace=0.3, wspace=0.3)
-plt.savefig('Figure_S5.png', dpi=300)
+plt.savefig('Figure_S7.png', dpi=300)

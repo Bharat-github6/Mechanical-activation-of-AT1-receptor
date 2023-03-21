@@ -9,6 +9,7 @@ from matplotlib.ticker import AutoMinorLocator
 import pandas as pd
 import numpy as np
 import matplotlib
+from cycler import cycler
 
 params = {'legend.fontsize': 20,
           'legend.handlelength': 5}
@@ -24,7 +25,7 @@ rc('lines', linewidth=0.9)
 
 simplify = {'simplify_threshold' : '0.5'}
 rc('path', **simplify)
-
+rcParams['axes.prop_cycle'] = cycler('color', ['#1f77b4', '#2ca02c', '#ff7f0e', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'])
 
 
 sopc_r1=pd.read_csv('../NPxxY/data/sopc_r1', delim_whitespace=True)

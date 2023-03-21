@@ -452,10 +452,6 @@ ax6.set_xlim(0,2000)
 rect = Rectangle((2040,-0.05), 432, 0.85, clip_on=False, ec='k', fill=False)
 ax6.add_patch(rect)
 
-print(np.quantile(popc_ssr1[0:400000].dropna().to_numpy().flatten(),0.25))
-print(np.quantile(popc_ssr1[0:400000].dropna().to_numpy().flatten(),0.5))
-print(np.quantile(popc_ssr1[0:400000].dropna().to_numpy().flatten(),0.75))
-print(popc_ss[360000:400000].to_numpy().flatten().std())
 box_parts = ax6.boxplot((popc_ss[300000:400000].dropna().to_numpy().flatten(),),
                         vert=True, positions=(start,), widths=(width,),
                         medianprops=dict(color='k'), boxprops=dict(color='k'), showfliers=False, patch_artist=True, manage_ticks=False, whis=(10,90))
