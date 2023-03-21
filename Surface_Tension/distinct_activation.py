@@ -60,6 +60,17 @@ popc=pd.concat([popc_r1,popc_r2], axis=1)
 
 popc=popc[:197500]
 popc=popc[-20000:]
+popc=popc.reset_index(drop=True)
+
+
+popc_TM1_TM6=popc[['TM1-TM6']].dropna().to_numpy().flatten()*10-19.70
+popc_TM1_ICL2=popc[['TM1-ICL2']].dropna().to_numpy().flatten()*10-19.50
+popc_TM5_ICL2=popc[['TM5-ICL2']].dropna().to_numpy().flatten()*10-29.77
+popc_TM6_H8=popc[['TM6-H8']].dropna().to_numpy().flatten()*10-17.30
+popc_TM3_TM6=popc[['TM3-TM6-ASP241']].dropna().to_numpy().flatten()*10-9.12
+
+popc=[popc_TM1_TM6, popc_TM1_ICL2,popc_TM5_ICL2,popc_TM6_H8,popc_TM3_TM6]
+
 
 
 st10_r1= pd.read_csv('../Surface_Tension/data/ST_10/replica_1/Deer_analysis_2us', delim_whitespace=True)
@@ -149,19 +160,25 @@ for patch in box_parts['boxes']:
 
 box_parts = ax.boxplot(pepc, vert=True, positions=x1, widths=[width,width,width,width,width], medianprops=dict(color='k'), showfliers=False, patch_artist=True)
 for patch in box_parts['boxes']:
+    patch.set(facecolor='grey')
+
+box_parts = ax.boxplot(popc, vert=True, positions=x1+sp, widths=[width,width,width,width,width], medianprops=dict(color='k'), showfliers=False, patch_artist=True)
+for patch in box_parts['boxes']:
     patch.set(facecolor='tab:green')
 
-box_parts = ax.boxplot(s1i8, vert=True, positions=x1+sp, widths=[width,width,width,width,width], medianprops=dict(color='k'), showfliers=False, patch_artist=True)
+box_parts = ax.boxplot(s1i8, vert=True, positions=x1+2*sp, widths=[width,width,width,width,width], medianprops=dict(color='k'), showfliers=False, patch_artist=True)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:red')
 
-box_parts = ax.boxplot(ang, vert=True, positions=x1+2*sp, widths=[width,width,width,width,width], medianprops=dict(color='k'), showfliers=False, patch_artist=True)
+box_parts = ax.boxplot(ang, vert=True, positions=x1+3*sp, widths=[width,width,width,width,width], medianprops=dict(color='k'), showfliers=False, patch_artist=True)
 for patch in box_parts['boxes']:
     patch.set(facecolor='tab:purple')
 
+
 # these lines below are just needed for labels
 rect1=ax.bar(-20,0, width,align='edge', color='lightblue', edgecolor='black', label='SOPC + 10 mN/m', rasterized=True)
-rect2=ax.bar(-20,0, width,align='edge', color='tab:green', edgecolor='black', label='SOPC:SOPE', rasterized=True)
+rect2=ax.bar(-20,0, width,align='edge', color='grey', edgecolor='black', label='SOPC:SOPE', rasterized=True)
+rect2=ax.bar(-20,0, width,align='edge', color='tab:green', edgecolor='black', label='POPC', rasterized=True)
 rect2=ax.bar(-20,0, width,align='edge', color='tab:red', edgecolor='black', label='SOPC + S1I8', rasterized=True)
 rect2=ax.bar(-20,0, width,align='edge', color='tab:purple', edgecolor='black', label='SOPC + AngII', rasterized=True)
 
@@ -178,7 +195,7 @@ ax.set_xlim(-0.5,4.7)
 ax.axhline(y=0.0, linestyle='--', lw=1.5, color='0.5')
 
 fig = plt.gcf()
-plt.subplots_adjust(top=0.82, bottom=0.22, left=0.19, right=0.97, hspace=0.4, wspace=0.2)
-plt.Figure.set_size_inches(fig,(3, 2.5))
-plt.savefig('Figure_6.png', dpi=900)
+plt.subplots_adjust(top=0.8, bottom=0.22, left=0.19, right=0.97, hspace=0.4, wspace=0.2)
+plt.Figure.set_size_inches(fig,(4, 3.5))
+plt.savefig('a.png', dpi=900)
 #plt.savefig('distinct_activation.svg', dpi=900)
