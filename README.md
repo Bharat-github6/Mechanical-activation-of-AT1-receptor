@@ -26,21 +26,23 @@ These data/instructions acompany the folowing manuscript: <br>
 
 ## Data and scripts for figures in the Supplementary Material:
 
-**Figure S1:** ```supplementary_figures/NPxxY/NPxxY.py``` - distance between Y302(OH) and Y215(OH) for WT systems.<br> 
+**Figure S1:** ```supplementary_figures/charmm36.charmm36.py``` - additional simulations with the CHARMM36 force-field.<br> 
 
-**Figure S2:** ```supplementary_figures/POPC_with_ST/popc_st.py``` - distances for POPC systems with surface tensions of 5 mN/m and 10 mN/m.<br> 
+**Figure S2:** ```supplementary_figures/NPxxY/NPxxY.py``` - distance between Y302(OH) and Y215(OH) for WT systems.<br> 
 
-**Figure S3:** ```supplementary_figures/POPC_with_ST/popc_thickness.py``` - POPC bilayer thickness under surface tensions of 0, 5 mN/m, and 10 mN/m compared to that of SOPC under various surface tensions.<br> 
+**Figure S3:** ```supplementary_figures/POPC_with_ST/popc_st.py``` - distances for POPC systems with surface tensions of 5 mN/m and 10 mN/m.<br> 
 
-**Figure S4:** ```supplementary_figures/H8_mutation/h8.py``` - stability of active state for double mutant F309P/F313P.<br> 
+**Figure S4:** ```supplementary_figures/POPC_with_ST/popc_thickness.py``` - POPC bilayer thickness under surface tensions of 0, 5 mN/m, and 10 mN/m compared to that of SOPC under various surface tensions.<br> 
 
-**Figure S5:** ```supplemantary_figures/H8_mutation/insertion_depth.py``` - insertion depth of H8 for WT and double mutant F309P/F313P for various membranes.<br>
+**Figure S5:** ```supplementary_figures/H8_mutation/h8.py``` - stability of active state for double mutant F309P/F313P.<br> 
 
 **Figure S6:** ```supplementary_figures/H8_mutation/npxxy_h8.py``` - distance between Y302(OH) and Y215(OH) for WT and double mutant F309P/F313P for various membranes.<br>
 
-**Figure S7:** ```supplementary_figures/energy_convergence/rmsd_fes.py``` root-mean-squared-deviation as a function of total simulation time for the free energy surfaces in the main text.<br>
+**Figure S7:** ```supplemantary_figures/H8_mutation/insertion_depth.py``` - insertion depth of H8 for WT and double mutant F309P/F313P for various membranes.<br>
 
-**Figure S8:** ```supplementary_figures/energy_convergence/fes_supp.py``` free energy estimation of AT1 receptor with both S1I8 and nanoboy bound, as well as AT1 receptor with nanobody bound.<br> 
+**Figure S8:** ```supplementary_figures/energy_convergence/rmsd_fes.py``` root-mean-squared-deviation as a function of total simulation time for the free energy surfaces in the main text.<br>
+
+**Figure S9:** ```supplementary_figures/energy_convergence/fes_supp.py``` free energy estimation of AT1 receptor with both S1I8 and nanoboy bound, as well as AT1 receptor with nanobody bound.<br> 
 
 ## Example of free energy calculation using the Locally Distributed Tesion (LDT) collective variable
 
@@ -53,9 +55,3 @@ Installation instructions for compiling and installing PLUMED can be found here:
 **Free energy of AT1 receptor with partial agonist (S1I8)** <br>
 
 The folder ```S1I8_example_fes``` contains contains the necessary files to reproduce the well-tempered metadynamics free energy calculation shown in Figure 7c of the manuscript. The file ```run_metad_sim.sh``` contains the GROMACS command to launch the WT-metadynamics run with the 8 walkers. The folder S1I8/reweight contains the combined colvar files and plumed input files to perform the re-weighting and produce the 2D FES data. The script ```S1I8_example_fes/reweight/calc_fes.sh``` will execute the combining procedure and perform the re-weighting using plumed.
-
-
-
-
-
-
