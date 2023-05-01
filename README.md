@@ -24,6 +24,8 @@ These data/instructions acompany the folowing manuscript: <br>
 
 **Figure 7:** ```FES/fes_4col.py``` - free energy estimation of AT1 receptor under various conditions.<br> 
 
+**Figure 8:** ```anton2_simulation/long_timescale.py.py``` - time evolution of AT1 receptor in three different conditions, 1) Apo-AT1 receptor in SOPC, 2) Apo-AT1 receptor in tensioned SOPC, and 3)  AngII bound AT1 receptor in SOPC. <br> 
+
 ## Data and scripts for figures in the Supplementary Material:
 
 **Figure S1:** ```supplementary_figures/charmm36.charmm36.py``` - additional simulations with the CHARMM36 force-field.<br> 
