@@ -24,7 +24,7 @@ rc('lines', linewidth=0.9)
 
 simplify = {'simplify_threshold' : '0.5'}
 rc('path', **simplify)
-
+rcParams['axes.prop_cycle'] = cycler(color=["tab:blue", "tab:green"])
 
 
 sopc_r1=pd.read_csv('data/sopc_r1', delim_whitespace=True)
@@ -506,4 +506,4 @@ ax.xaxis.set_major_locator(MultipleLocator(500))
 ax.xaxis.set_minor_locator(AutoMinorLocator(5))
 
 plt.subplots_adjust(top=0.95, bottom=0.08, left=0.07, right=0.975, hspace=0.35, wspace=0.25)
-plt.savefig('Figure_S2.png', dpi=300)
+plt.savefig('Figure_S3.png', dpi=300)

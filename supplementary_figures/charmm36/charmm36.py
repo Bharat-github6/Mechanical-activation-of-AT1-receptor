@@ -89,5 +89,5 @@ ax.xaxis.set_minor_locator(AutoMinorLocator(2))
 fig = plt.gcf()
 plt.subplots_adjust(top=0.92, bottom=0.1, left=0.12, right=0.95, hspace=0.3, wspace=0.0)
 plt.Figure.set_size_inches(fig,(5, 7.5))
-plt.savefig('Figure_S1.png', dpi=900)
+plt.savefig('Figure_S2.png', dpi=900)
 
