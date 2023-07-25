@@ -27,12 +27,12 @@ rc('path', **simplify)
 
 #illustr = plt.imread('SOPC-SOPE.png')
 
-popc_r1= pd.read_csv('data_Supp_figure_8/popc_r1', delim_whitespace=True)
+popc_r1= pd.read_csv('data_Supp_figure_7/popc_r1', delim_whitespace=True)
 popc_r1.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 popc_r1=popc_r1[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
 
-popc_r2= pd.read_csv('data_Supp_figure_8/popc_r2', delim_whitespace=True)
+popc_r2= pd.read_csv('data_Supp_figure_7/popc_r2', delim_whitespace=True)
 popc_r2.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 popc_r2=popc_r2[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
@@ -41,12 +41,12 @@ popc=pd.concat([popc_r1, popc_r2], axis=1)
 popc=popc[:200000]
 time_popc=np.linspace(0,2000,len(popc))
 
-sopc_r1= pd.read_csv('data_Supp_figure_8/sopc_r1', delim_whitespace=True)
+sopc_r1= pd.read_csv('data_Supp_figure_7/sopc_r1', delim_whitespace=True)
 sopc_r1.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 sopc_r1=sopc_r1[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
 
-sopc_r2= pd.read_csv('data_Supp_figure_8/sopc_r2', delim_whitespace=True)
+sopc_r2= pd.read_csv('data_Supp_figure_7/sopc_r2', delim_whitespace=True)
 sopc_r2.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 sopc_r2=sopc_r2[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
@@ -55,12 +55,12 @@ sopc=pd.concat([sopc_r1, sopc_r2], axis=1)
 sopc=sopc[:200000]
 time_sopc=np.linspace(0,2000,len(sopc))
 
-pepc_r1= pd.read_csv('data_Supp_figure_8/pepc_r1', delim_whitespace=True)
+pepc_r1= pd.read_csv('data_Supp_figure_7/pepc_r1', delim_whitespace=True)
 pepc_r1.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 pepc_r1=pepc_r1[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
 
-pepc_r2= pd.read_csv('data_Supp_figure_8/pepc_r2', delim_whitespace=True)
+pepc_r2= pd.read_csv('data_Supp_figure_7/pepc_r2', delim_whitespace=True)
 pepc_r2.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 pepc_r2=pepc_r2[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
@@ -70,12 +70,12 @@ pepc=pepc[:200000]
 time_pepc=np.linspace(0,2000,len(pepc))
 
 
-st10_r1= pd.read_csv('data_Supp_figure_8/st10_r1', delim_whitespace=True)
+st10_r1= pd.read_csv('data_Supp_figure_7/st10_r1', delim_whitespace=True)
 st10_r1.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 st10_r1=st10_r1[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
 
-st10_r2= pd.read_csv('data_Supp_figure_8/st10_r2', delim_whitespace=True)
+st10_r2= pd.read_csv('data_Supp_figure_7/st10_r2', delim_whitespace=True)
 st10_r2.columns=['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH','n','n']
 st10_r2=st10_r2[['time', 'TM1-TM6', 'TM1-ICL2', 'TM5-ICL2','TM6-H8','TM3-TM6-ASP241','OH']]
 
@@ -88,11 +88,11 @@ time_st10=np.linspace(0,2000,len(st10))
 
 
 ##ICL2
-popc_ssr1=pd.read_csv('data_Supp_figure_8/popc_ICL2_r1.xvg', delim_whitespace=True, comment='#')
+popc_ssr1=pd.read_csv('data_Supp_figure_7/popc_ICL2_r1.xvg', delim_whitespace=True, comment='#')
 popc_ssr1.columns=['time', 'structure', 'coil','Bend', 'Turn', 'A_Helix','Th_Helix']
 popc_ssr1=popc_ssr1[:400000]
 
-popc_ssr2=pd.read_csv('data_Supp_figure_8/popc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
+popc_ssr2=pd.read_csv('data_Supp_figure_7/popc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
 popc_ssr2.columns=['time', 'structure', 'coil','Bend', 'Turn', 'A_Helix','Th_Helix']
 popc_ssr2=popc_ssr2[:400000]
 
@@ -102,11 +102,11 @@ popc_ssr2=popc_ssr2[['A_Helix','Th_Helix']].sum(axis=1)/11
 popc_ss=pd.concat([popc_ssr1, popc_ssr2], axis=1)
 popc_ss_err=pd.concat([popc_ssr1, popc_ssr2], axis=1).std(axis=1)
 
-sopc_ssr1=pd.read_csv('data_Supp_figure_8/sopc_ICL2_r1.xvg', delim_whitespace=True, comment='#')
+sopc_ssr1=pd.read_csv('data_Supp_figure_7/sopc_ICL2_r1.xvg', delim_whitespace=True, comment='#')
 sopc_ssr1.columns=['time', 'structure', 'coil','Bend', 'B_bride','Turn', 'A_Helix','fiv_Helix','Th_Helix']
 sopc_ssr1=sopc_ssr1[:400000]
 
-sopc_ssr2=pd.read_csv('data_Supp_figure_8/sopc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
+sopc_ssr2=pd.read_csv('data_Supp_figure_7/sopc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
 sopc_ssr2.columns=['time', 'structure', 'coil','Bend', 'Turn', 'A_Helix','fiv_helix','Th_Helix']
 sopc_ssr2=sopc_ssr2[:400000]
 
@@ -116,15 +116,15 @@ sopc_ss=pd.concat([sopc_ssr1, sopc_ssr2], axis=1)
 sopc_ss_err=pd.concat([sopc_ssr1, sopc_ssr2], axis=1).std(axis=1)
 
 
-pepc_ssr1_1=pd.read_csv('data_Supp_figure_8/pepc_ICL2_r1.xvg', delim_whitespace=True, comment='#')
+pepc_ssr1_1=pd.read_csv('data_Supp_figure_7/pepc_ICL2_r1.xvg', delim_whitespace=True, comment='#')
 pepc_ssr1_1.columns=['time', 'structure', 'coil','Bend','Turn', 'A_Helix','fiv_Helix','Th_Helix']
 #pepc_ssr1=pepc_ssr1[:400000]
 
-pepc_ssr1_2=pd.read_csv('data_Supp_figure_8/pepc_ICL2_2us_2nd.xvg', delim_whitespace=True, comment='#')
+pepc_ssr1_2=pd.read_csv('data_Supp_figure_7/pepc_ICL2_2us_2nd.xvg', delim_whitespace=True, comment='#')
 pepc_ssr1_2.columns=['time', 'structure', 'coil','Bend','Turn', 'A_Helix','Th_Helix']
 pepc_ssr1_2=pepc_ssr1_2[['A_Helix', 'Th_Helix']].sum(axis=1)/11
 
-pepc_ssr2=pd.read_csv('data_Supp_figure_8/pepc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
+pepc_ssr2=pd.read_csv('data_Supp_figure_7/pepc_ICL2_r2.xvg', delim_whitespace=True, comment='#')
 pepc_ssr2.columns=['time', 'structure', 'coil','Bend', 'Turn', 'A_Helix','fiv_helix','Th_Helix']
 pepc_ssr2=pepc_ssr2[:4000000]
 
@@ -139,13 +139,13 @@ pepc_ss_err=pd.concat([pepc_ssr1, pepc_ssr2], axis=1).std(axis=1)
 
 
 
-st10_ssr1=pd.read_csv('data_Supp_figure_8/st10_ICL2_r1.xvg', delim_whitespace=True, comment='#')
+st10_ssr1=pd.read_csv('data_Supp_figure_7/st10_ICL2_r1.xvg', delim_whitespace=True, comment='#')
 st10_ssr1.columns=['time', 'structure', 'coil','Bend','Turn', 'A_Helix','fiv_Helix','Th_Helix']
 st10_ssr1=st10_ssr1[:400000]
 time=st10_ssr1[['time']]*0.001
 
 
-st10_ssr2=pd.read_csv('data_Supp_figure_8/st10_ICL2_r2.xvg', delim_whitespace=True, comment='#')
+st10_ssr2=pd.read_csv('data_Supp_figure_7/st10_ICL2_r2.xvg', delim_whitespace=True, comment='#')
 st10_ssr2.columns=['time', 'structure', 'coil','B_bridge','Bend', 'Turn','Th_Helix']
 st10_ssr2=st10_ssr2[:400000]
 
