@@ -1,5 +1,5 @@
 # Supplementary Figure 3
-<img src="Figure_S3.png" width="800"/>
+<img src="Supp_figure_3.png" width="800"/>
 
 Caption: Orientation of the conserved NPxxY motif in TM7 monitored by the distance between the hydroxyl oxygens of Y215 (5.58) and Y302 (7.53). Top row panels (a-b) show distances for the SOPC, POPC, DMPC, and SOPC:SOPE systems. Middle panels (e-h) show distances for SOPC bilayers under tension. Bottom row panels (i-l) show distances for systems with the AT1 receptor bound to agonists and/or nanobody. The blue and  green lines represent the two simulated replicas.
 

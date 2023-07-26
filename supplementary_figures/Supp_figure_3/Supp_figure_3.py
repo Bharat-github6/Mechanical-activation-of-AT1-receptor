@@ -506,4 +506,4 @@ ax.xaxis.set_major_locator(MultipleLocator(500))
 ax.xaxis.set_minor_locator(AutoMinorLocator(5))
 
 plt.subplots_adjust(top=0.95, bottom=0.08, left=0.07, right=0.975, hspace=0.35, wspace=0.25)
-plt.savefig('Figure_S3.png', dpi=300)
+plt.savefig('Supp_figure_3.png', dpi=300)

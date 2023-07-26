@@ -1,5 +1,5 @@
 # Supplementary Figure 14
-<img src="Figure_S14.png" width="800"/>
+<img src="Supp_figure_14.png" width="800"/>
 
 Caption: Alpha-helicity of ICL2 for selected Anton 2 simulations with the CHARMM36 FF. Dashed grey and orange lines show values from crystal structures of the inactive receptor bound to a selective antagonist (4YAY) and active receptor bound to AngII (6OS0) respectively.
 

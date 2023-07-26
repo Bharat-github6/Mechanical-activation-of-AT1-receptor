@@ -424,5 +424,5 @@ fig = plt.gcf()
 
 plt.subplots_adjust(top=0.90, bottom=0.115, left=0.08, right=0.92, hspace=0.43, wspace=0.65)
 plt.Figure.set_size_inches(fig,(11, 5))
-plt.savefig('Figure_S1.png', dpi=300)
+plt.savefig('Supp_figure_1.png', dpi=300)
 plt.close()

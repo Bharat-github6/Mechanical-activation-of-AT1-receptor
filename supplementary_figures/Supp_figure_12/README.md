@@ -1,5 +1,5 @@
 # Supplementary Figure 12
-<img src="Figure_S12.png" width="800"/>
+<img src="Supp_figure_12.png" width="800"/>
 
 Caption: Root-mean-squared deviation of the free energy landscape as a function of time for determining the convergence of the well-tempered metadynamics calculations.
 
