@@ -2,49 +2,38 @@
 
 These data/instructions acompany the folowing manuscript: <br>
 
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
+**Title**: Membrane mediated mechanical stimuli produces distinct active-like states in the AT1 receptor.<br>
 
 **Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
 
 **Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
 
-## Data and scripts for figures in the main text:
+## Data and plotting scripts for figures in the main text and supplementary information
 
-**Figure 1:** ```Acyl_chain_length/acyl_chain_length.py``` - comparison of three membranes of different acyl cahin length: DMPC, POPC and SOPC.<br> 
+Each folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. Each data file has a header that describes each column in the file. 
 
-**Figure 2:** ```Surface_Tension/st.py``` - average distances over the last 200 nanoseconds for SOPC systems under tension ranging from 0 to 20 mN/m in intervals of 5mN/m.<br>
+Statistical analyses including mean, standard deviation, quartiles, etc. calculated within the python scripts based on the input data files.
 
-**Figure 3:** ```Surface_Tension/thickness.py``` - bilayer thickness for different systems.<br> 
+## Initial and final configurations of MD simulations
 
-**Figure 4:** ```SOPC_SOPE/sope_sopc.py``` - time evolution of distances for SOPC and SOPC:SOPE membranes.<br> 
+The folder `MD_configurations` contains the initial and final configurations for all the simulations presented in the study. The files are organized into folders labeled System_\#. The system description is shown in the table below and also inside a README.md file in each folder.
 
-**Figure 5:** ```agonist_nanobody/agonist_nanobody.py``` time evolution of agonist and/or nanobody bound systems.<br> 
-
-**Figure 6:** ```Surface_Tension/distinct_activation.py``` - change in intra-helical distances between active and inactive states.<br> 
-
-**Figure 7:** ```FES/fes_4col.py``` - free energy estimation of AT1 receptor under various conditions.<br> 
-
-**Figure 8:** ```anton2_simulation/long_timescale.py ``` - time evolution of AT1 receptor in three different conditions, 1) Apo-AT1 receptor in SOPC, 2) Apo-AT1 receptor in tensioned SOPC, and 3)  AngII bound AT1 receptor in SOPC. <br> 
-
-## Data and scripts for figures in the Supplementary Material:
-
-**Figure S1:** ```supplementary_figures/charmm36.charmm36.py``` - additional simulations with the CHARMM36 force-field.<br> 
-
-**Figure S2:** ```supplementary_figures/NPxxY/NPxxY.py``` - distance between Y302(OH) and Y215(OH) for WT systems.<br> 
-
-**Figure S3:** ```supplementary_figures/POPC_with_ST/popc_st.py``` - distances for POPC systems with surface tensions of 5 mN/m and 10 mN/m.<br> 
-
-**Figure S4:** ```supplementary_figures/POPC_with_ST/popc_thickness.py``` - POPC bilayer thickness under surface tensions of 0, 5 mN/m, and 10 mN/m compared to that of SOPC under various surface tensions.<br> 
-
-**Figure S5:** ```supplementary_figures/H8_mutation/h8.py``` - stability of active state for double mutant F309P/F313P.<br> 
-
-**Figure S6:** ```supplementary_figures/H8_mutation/npxxy_h8.py``` - distance between Y302(OH) and Y215(OH) for WT and double mutant F309P/F313P for various membranes.<br>
-
-**Figure S7:** ```supplemantary_figures/H8_mutation/insertion_depth.py``` - insertion depth of H8 for WT and double mutant F309P/F313P for various membranes.<br>
-
-**Figure S8:** ```supplementary_figures/energy_convergence/rmsd_fes.py``` root-mean-squared-deviation as a function of total simulation time for the free energy surfaces in the main text.<br>
-
-**Figure S9:** ```supplementary_figures/energy_convergence/fes_supp.py``` free energy estimation of AT1 receptor with both S1I8 and nanoboy bound, as well as AT1 receptor with nanobody bound.<br> 
+| System                           | Total Nr. of Atoms | Box dimensions (nm) | Nr. of Lipids | Nr. of Waters | Cl- | Na+ |
+|----------------------------------|--------------------|---------------------|---------------|---------------|-----|-----|
+| (1) DMPC + AT1R                  | 99,132             | 10x10x11.8          | 300           | 27,388        | 13  |  0  |
+| (2) POPC + AT1R                  | 112,330            | 10.4x0.4x13.5       | 304           | 31,068        | 13  |  0  |
+| (3) SOPC + AT1R                  | 106,560            | 10.4x10.4x13.5      | 298           | 29,050        | 13  |  0  |
+| (4) SOPC:SOPE + AT1R             | 90,885             | 9.5x9.5x13          | 300           | 23,789        | 13  |  0  |
+| (5) SOPC + AT1R + AngII          | 106,662            | 10.4x10.4x13.5      | 298           | 29,050        | 13  |  0  |
+| (6) SOPC + AT1R + S1I8           | 106,651            | 10.4x10.4x13.5      | 298           | 29,050        | 14  |  0  |
+| (7) SOPC + AT1R + S1I8 +Nb       | 107,821            | 10.4x10.4x13.5      | 298           | 29,056        | 8   |  0  |
+| (8) SOPC + AT1R + Nb             | 107,912            | 10.4x10.4x13.5      | 298           | 29,056        | 7   |  0  |
+| (9) POPC + F309P/313P AT1R       | 82,319             | 10.4x10.4x10        | 304           | 21,071        | 13  |  0  |
+| (10) SOPC + F309P/313P AT1R      | 83,329             | 10.5x10.5x11        | 298           | 21,313        | 13  |  0  |
+| (11) SOPC:SOPE + F309P/313P AT1R | 72,427             | 9.5x9.5x10          | 300           | 17,643        | 13  |  0  |
+| (12) POPC + AT1R                 | 49,146             | 6.4x6.4x11.6        | 100           | 10,154        | 39  |  26 |
+| (13) SOPC + AT1R                 | 52,021             | 6.4x6.4x12.5        | 100           | 10,911        | 41  |  28 |
+| (14) SOPC + AT1R + AngII         | 48,274             | 6.7x6.7x11.5        | 100           | 9,616         | 37  |  24 |
 
 ## Example of free energy calculation using the Locally Distributed Tesion (LDT) collective variable
 
