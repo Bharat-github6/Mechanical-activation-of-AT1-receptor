@@ -1,17 +1,8 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+# Supplementary Figure 14
+<img src="Figure_S14.png" width="800"/>
 
-These data/instructions acompany the folowing manuscript: <br>
+Caption: Alpha-helicity of ICL2 for selected Anton 2 simulations with the CHARMM36 FF. Dashed grey and orange lines show values from crystal structures of the inactive receptor bound to a selective antagonist (4YAY) and active receptor bound to AngII (6OS0) respectively.
 
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
+*This folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. Each data file has a header that describes each column in the file.*
 
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
-
-**Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
-
-
-## Data and scripts for figures in the Supplementary Material:
-
-
-
-**Supp_figure_14:** ```Supp_figure_14.py``` Alpha-helicity of ICL2 as a function of time for those three systems shown in Figure 8 of man text. <br> 
-
+*Statistical analyses including mean, standard deviation, quartiles, etc. calculated within the python scripts based on the input data files.*

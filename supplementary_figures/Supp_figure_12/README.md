@@ -1,16 +1,8 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+# Supplementary Figure 12
+<img src="Figure_S12.png" width="800"/>
 
-These data/instructions acompany the folowing manuscript: <br>
+Caption: Root-mean-squared deviation of the free energy landscape as a function of time for determining the convergence of the well-tempered metadynamics calculations.
 
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
+*This folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. Each data file has a header that describes each column in the file.*
 
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
-
-**Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
-
-
-## Data and scripts for figures in the Supplementary Material:
-
-
-**Supp_figure_12:** ```Supp_figure_12.py``` root-mean-squared-deviation as a function of total simulation time for the free energy surfaces in the main text.<br>
-
+*Statistical analyses including mean, standard deviation, quartiles, etc. calculated within the python scripts based on the input data files.*

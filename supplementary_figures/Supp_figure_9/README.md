@@ -1,15 +1,8 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+# Supplementary Figure 9
+<img src="Figure_S9.png" width="800"/>
 
-These data/instructions acompany the folowing manuscript: <br>
+Caption: Orientation of the conserved NPxxY motif in TM7 monitored by the distance between the hydroxyl oxygens of Y215 (5.58) and Y302 (7.53). Data for two replicas (blue and green) of the double-mutant F309P/F313P in SOPC (a), SOPC with 10 mN/m tension (b), POPC (c), and SOPC:SOPE (d).
 
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
+*This folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. Each data file has a header that describes each column in the file.*
 
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
-
-**Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
-
-## Data and scripts for figures in the Supplementary Material:
-
-
-**Supp_figure_9:** ```Supp_figure_9.py``` - insertion depth of H8 for WT and double mutant F309P/F313P for various membranes.<br>
-
+*Statistical analyses including mean, standard deviation, quartiles, etc. calculated within the python scripts based on the input data files.*

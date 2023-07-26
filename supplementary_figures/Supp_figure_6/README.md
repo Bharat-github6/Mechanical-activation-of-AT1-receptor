@@ -1,16 +1,8 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+# Supplementary Figure 6
+<img src="Figure_S6.png" width="800"/>
 
-These data/instructions acompany the folowing manuscript: <br>
+Caption: Time evolution of apo AT1 receptor simulations in SOPC and SOPC:SOPE (1:1) membranes for the second replica. Key structural features including the distances between TM1-TM6 (a), TM1-ICL2 (b), TM5-ICL2 (c), TM6-H8 (d) and TM3-TM6 (e), as well as the alpha-helicity of ICL2 (f) indicate that the active state is stable in the SOPC:SOPE  (green lines) membrane, while the pure SOPC membrane promotes inactivation. Rectangular boxes on the right of each panel show box and whiskers plots including median, quartiles, and extrema of the combined data from the two replicas of each system over the last 500 ns (n=2 independent simulations, 200,000 time points analyzed). Dashed grey and orange lines show values from crystal structures of the inactive receptor bound to a selective antagonist (4YAY) and active receptor bound to AngII (6OS0) respectively.
 
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
+*This folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. Each data file has a header that describes each column in the file.*
 
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
-
-**Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
-
-
-## Data and scripts for figures in the Supplementary Material:
-
-
-**Supp_figure_6:** ```Supp_figure_6.py``` - Time evolution of the second replica of AT1 receptor in SOPC and SOPC:SOPE membrane as well as the average interhelical distances of last 500nd (box plot).<br>
-
+*Statistical analyses including mean, standard deviation, quartiles, etc. calculated within the python scripts based on the input data files.*

@@ -1,15 +1,6 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+# Supplementary Figure 5
+<img src="Figure_S5.png" width="400"/>
 
-These data/instructions acompany the folowing manuscript: <br>
+Caption: Bilayer thickness for POPC (green triangles) and SOPC (blue squares) membranes under tension. Bilayer thickness was computed by measuring the peak-to-peak distance of the average bilayer mass density over the last 500 ns of the two replicas (n=2 independent simulations, 200,000 time points analyzed). Error bars show the standard deviation from the mean.
 
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
-
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
-
-**Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
-
-
-## Data and scripts for figures in the Supplementary Material:
-
-
-**Figure S4:** ```Supp_figure_5.py``` - POPC bilayer thickness under surface tensions of 0, 5 mN/m, and 10 mN/m compared to that of SOPC under various surface tensions.<br> 
+*This folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. The bilayer thickness data and estimated errors are included directly in the python script.*
