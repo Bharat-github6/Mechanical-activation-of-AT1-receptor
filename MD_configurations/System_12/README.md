@@ -1,16 +1,6 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+## Initial and final configurations of MD simulations
 
-These data/instructions acompany the folowing manuscript: <br>
-
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
-
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
-
-**Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
-
-## Data and scripts for figures in the main text:
-
-**initial.pdb:** - Statring structure  of AT1 receptor embeded in POPC membrane  generated from charmm-gui.<br> 
-
-**final.pdb:** - Final structure after 20 microseconds of AT1 receptor embeded in POPC membrane .<br>
+| System                           | Total Nr. of Atoms | Box dimensions (nm) | Nr. of Lipids | Nr. of Waters | Cl- | Na+ |
+|----------------------------------|--------------------|---------------------|---------------|---------------|-----|-----|
+| (12) POPC + AT1R                 | 49,146             | 6.4x6.4x11.6        | 100           | 10,154        | 39  |  26 |
 
