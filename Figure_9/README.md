@@ -1,14 +1,6 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+# Figure 9
+<img src="Figure_9.png" width="800"/>
 
-These data/instructions acompany the folowing manuscript: <br>
+Caption: Ribbon representations of long time-scale simulations of the apo AT1 receptor in SOPC membranes using the CHARMM36 FF on the Anton 2 supercomputer. a) Structure after 20 us with a tension of 10 mN/m compared to the active state crystal structure (PDBID: 6OS0, with AngII-bound). b) Structure after 5 us with no tension compared to inactive state crystal structure (PDBID: 4YAY, with antagonist-bound). Structures superimposed by minimizing the RMSD distance.
 
-**Title**: Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor.<br>
-
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
-
-**Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
-
-## Data and scripts for figures in the main text:
-
-**Figure 9:** ```Figure_9.png ``` - Comparison of the file apo AT1 receptor's structure from 5 microsecnds to the experimental inactive structure (PDBID: 4YAY) and the AngII-bound AT1 receptor structure with the experimental active structure (PDBID: 6OS0). <br> 
-
+*Image generated using UCSF Chimera based on the PDB structures found in the `structures` folder.*
