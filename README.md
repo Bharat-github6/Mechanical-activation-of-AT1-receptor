@@ -31,9 +31,9 @@ The folder `MD_configurations` contains the initial and final configurations for
 | (9) POPC + F309P/313P AT1R       | 82,319             | 10.4x10.4x10        | 304           | 21,071        | 13  |  0  |
 | (10) SOPC + F309P/313P AT1R      | 83,329             | 10.5x10.5x11        | 298           | 21,313        | 13  |  0  |
 | (11) SOPC:SOPE + F309P/313P AT1R | 72,427             | 9.5x9.5x10          | 300           | 17,643        | 13  |  0  |
-| (12) POPC + AT1R                 | 49,146             | 6.4x6.4x11.6        | 100           | 10,154        | 39  |  26 |
-| (13) SOPC + AT1R                 | 52,021             | 6.4x6.4x12.5        | 100           | 10,911        | 41  |  28 |
-| (14) SOPC + AT1R + AngII         | 48,274             | 6.7x6.7x11.5        | 100           | 9,616         | 37  |  24 |
+| (12) POPC + AT1R (C36/Anton)     | 49,146             | 6.4x6.4x11.6        | 100           | 10,154        | 39  |  26 |
+| (13) SOPC + AT1R (C36/Anton)     | 52,021             | 6.4x6.4x12.5        | 100           | 10,911        | 41  |  28 |
+| (14) SOPC + AT1R + AngII (C36/Anton)| 48,274             | 6.7x6.7x11.5        | 100           | 9,616         | 37  |  24 |
 
 ## Example of free energy calculation using the Locally Distributed Tesion (LDT) collective variable
 
