@@ -1,4 +1,4 @@
-# Membrane mediated mechanical stimuli produces distinct active states in the AT1 receptor
+# Membrane mediated mechanical stimuli produces distinct active-like states in the AT1 receptor
 
 These data/instructions acompany the folowing manuscript: <br>
 
