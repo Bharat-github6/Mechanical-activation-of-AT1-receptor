@@ -4,17 +4,17 @@ These data/instructions acompany the folowing manuscript: <br>
 
 **Title**: Membrane mediated mechanical stimuli produces distinct active-like states in the AT1 receptor.<br>
 
-**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan Vanegas (Oregon State University)<br>
+**Authors**:Bharat Poudel (University of Vermont), Rajitha Rajeshwar T. (University of Vermont), Juan M. Vanegas (Oregon State University)<br>
 
 **Pre-print**: https://www.researchsquare.com/article/rs-2106113/v1 <br>
 
-## Data and plotting scripts for figures in the main text and supplementary information
+### Data and plotting scripts for figures in the main text and supplementary information
 
 Each folder contains the input data generated from the MD simulations, the python script used to generate the corresponding plot, and the final png image. Each data file has a header that describes each column in the file. 
 
 Statistical analyses including mean, standard deviation, quartiles, etc. calculated within the python scripts based on the input data files.
 
-## Initial and final configurations of MD simulations
+### Initial and final configurations of MD simulations
 
 The folder `MD_configurations` contains the initial and final configurations for all the simulations presented in the study. The files are organized into folders labeled System_\#. The system description is shown in the table below and also inside a README.md file in each folder.
 
@@ -35,7 +35,7 @@ The folder `MD_configurations` contains the initial and final configurations for
 | (13) SOPC + AT1R (C36/Anton)     | 52,021             | 6.4x6.4x12.5        | 100           | 10,911        | 41  |  28 |
 | (14) SOPC + AT1R + AngII (C36/Anton)| 48,274             | 6.7x6.7x11.5        | 100           | 9,616         | 37  |  24 |
 
-## Example of free energy calculation using the Locally Distributed Tesion (LDT) collective variable
+### Example of free energy calculation using the Locally Distributed Tesion (LDT) collective variable
 
 **Compiling and installing the PLUMED-patched version of GROMACS** <br>
 
